@@ -1,0 +1,1756 @@
+fileFormatVersion: 2
+guid: b870299a839ec014d810c17dde0993cc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4025571983267224713
+    second: KakaoTalk_20250616_113626189_0
+  - first:
+      213: 2511356379861922621
+    second: KakaoTalk_20250616_113626189_1
+  - first:
+      213: -8469566196852983616
+    second: KakaoTalk_20250616_113626189_2
+  - first:
+      213: 6757032145146712370
+    second: KakaoTalk_20250616_113626189_3
+  - first:
+      213: 3372045707025238153
+    second: KakaoTalk_20250616_113626189_4
+  - first:
+      213: 1224419525969674747
+    second: KakaoTalk_20250616_113626189_5
+  - first:
+      213: 8421814517711928880
+    second: KakaoTalk_20250616_113626189_6
+  - first:
+      213: 1290135660965938120
+    second: KakaoTalk_20250616_113626189_7
+  - first:
+      213: -1787590156270724970
+    second: KakaoTalk_20250616_113626189_8
+  - first:
+      213: 5564572450897471731
+    second: KakaoTalk_20250616_113626189_9
+  - first:
+      213: 811425777927270233
+    second: KakaoTalk_20250616_113626189_10
+  - first:
+      213: 3387500662594495168
+    second: KakaoTalk_20250616_113626189_11
+  - first:
+      213: -6465242807533545835
+    second: KakaoTalk_20250616_113626189_12
+  - first:
+      213: -9030805950173839452
+    second: KakaoTalk_20250616_113626189_13
+  - first:
+      213: 7367607142932799638
+    second: KakaoTalk_20250616_113626189_14
+  - first:
+      213: -7650514980008667177
+    second: KakaoTalk_20250616_113626189_15
+  - first:
+      213: 3117113563383270927
+    second: KakaoTalk_20250616_113626189_16
+  - first:
+      213: -7249807014143448910
+    second: KakaoTalk_20250616_113626189_17
+  - first:
+      213: -331123208867582212
+    second: KakaoTalk_20250616_113626189_18
+  - first:
+      213: -5662154120905742924
+    second: KakaoTalk_20250616_113626189_19
+  - first:
+      213: -7600873559987594166
+    second: KakaoTalk_20250616_113626189_20
+  - first:
+      213: 585029479478094308
+    second: KakaoTalk_20250616_113626189_21
+  - first:
+      213: 8771334181544639880
+    second: KakaoTalk_20250616_113626189_22
+  - first:
+      213: 5578668541825145811
+    second: KakaoTalk_20250616_113626189_23
+  - first:
+      213: 2992076592435150767
+    second: KakaoTalk_20250616_113626189_24
+  - first:
+      213: -5758479640732449595
+    second: KakaoTalk_20250616_113626189_25
+  - first:
+      213: -3590431173135177295
+    second: KakaoTalk_20250616_113626189_26
+  - first:
+      213: 5392382131522886593
+    second: KakaoTalk_20250616_113626189_27
+  - first:
+      213: 4205960985728119248
+    second: KakaoTalk_20250616_113626189_28
+  - first:
+      213: 1726994492743952093
+    second: KakaoTalk_20250616_113626189_29
+  - first:
+      213: -6543945728064993713
+    second: KakaoTalk_20250616_113626189_30
+  - first:
+      213: -6100542340988578972
+    second: KakaoTalk_20250616_113626189_31
+  - first:
+      213: -1165464072155578676
+    second: KakaoTalk_20250616_113626189_32
+  - first:
+      213: -3524316156754618412
+    second: KakaoTalk_20250616_113626189_33
+  - first:
+      213: 2255297537716356838
+    second: KakaoTalk_20250616_113626189_34
+  - first:
+      213: -5331866165790092719
+    second: KakaoTalk_20250616_113626189_35
+  - first:
+      213: -5197975780028815590
+    second: KakaoTalk_20250616_113626189_36
+  - first:
+      213: 2672816098942975095
+    second: KakaoTalk_20250616_113626189_37
+  - first:
+      213: 6369869643473760421
+    second: KakaoTalk_20250616_113626189_38
+  - first:
+      213: 8845409184619817277
+    second: KakaoTalk_20250616_113626189_39
+  - first:
+      213: 6432980287294074960
+    second: KakaoTalk_20250616_113626189_40
+  - first:
+      213: 4802029057241126118
+    second: KakaoTalk_20250616_113626189_41
+  - first:
+      213: -5799792874544002025
+    second: KakaoTalk_20250616_113626189_42
+  - first:
+      213: 5357558106997249334
+    second: KakaoTalk_20250616_113626189_43
+  - first:
+      213: 3461718420689252007
+    second: KakaoTalk_20250616_113626189_44
+  - first:
+      213: -4141431478685459125
+    second: KakaoTalk_20250616_113626189_45
+  - first:
+      213: 10138436030549429
+    second: KakaoTalk_20250616_113626189_46
+  - first:
+      213: -4774003161245868199
+    second: KakaoTalk_20250616_113626189_47
+  - first:
+      213: 6407157944746464149
+    second: KakaoTalk_20250616_113626189_48
+  - first:
+      213: -5097290893860962844
+    second: KakaoTalk_20250616_113626189_49
+  - first:
+      213: -235198336406670599
+    second: KakaoTalk_20250616_113626189_50
+  - first:
+      213: -3902335871741253820
+    second: KakaoTalk_20250616_113626189_51
+  - first:
+      213: -8416524969028513334
+    second: KakaoTalk_20250616_113626189_52
+  - first:
+      213: 3121170258742608633
+    second: KakaoTalk_20250616_113626189_53
+  - first:
+      213: 6578580337347230509
+    second: KakaoTalk_20250616_113626189_54
+  - first:
+      213: -4286402212813775013
+    second: KakaoTalk_20250616_113626189_55
+  - first:
+      213: -5659006732648271945
+    second: KakaoTalk_20250616_113626189_56
+  - first:
+      213: -8881833378856105984
+    second: KakaoTalk_20250616_113626189_57
+  - first:
+      213: -4094688957515020534
+    second: KakaoTalk_20250616_113626189_58
+  - first:
+      213: -2936182650445560892
+    second: KakaoTalk_20250616_113626189_59
+  - first:
+      213: 8628736661902491720
+    second: KakaoTalk_20250616_113626189_60
+  - first:
+      213: 3761996614378741173
+    second: KakaoTalk_20250616_113626189_61
+  - first:
+      213: -5913962687447872446
+    second: KakaoTalk_20250616_113626189_62
+  - first:
+      213: -2006189171149873920
+    second: KakaoTalk_20250616_113626189_63
+  - first:
+      213: -1490744761227527801
+    second: KakaoTalk_20250616_113626189_64
+  - first:
+      213: -6803146841944259430
+    second: KakaoTalk_20250616_113626189_65
+  - first:
+      213: -8114845274839617070
+    second: KakaoTalk_20250616_113626189_66
+  - first:
+      213: -6270360228133432601
+    second: KakaoTalk_20250616_113626189_67
+  - first:
+      213: -5569072898962221909
+    second: KakaoTalk_20250616_113626189_68
+  - first:
+      213: -8138586705819059651
+    second: KakaoTalk_20250616_113626189_69
+  - first:
+      213: -4750353598894453730
+    second: KakaoTalk_20250616_113626189_70
+  - first:
+      213: 4704589153010598247
+    second: KakaoTalk_20250616_113626189_71
+  - first:
+      213: -8649836802216287169
+    second: KakaoTalk_20250616_113626189_72
+  - first:
+      213: -2915424313428331249
+    second: KakaoTalk_20250616_113626189_73
+  - first:
+      213: -4027158414093129329
+    second: KakaoTalk_20250616_113626189_74
+  - first:
+      213: -1518269164454955951
+    second: KakaoTalk_20250616_113626189_75
+  - first:
+      213: -8503222730819957724
+    second: KakaoTalk_20250616_113626189_76
+  - first:
+      213: -3118746384653512095
+    second: KakaoTalk_20250616_113626189_77
+  - first:
+      213: 6925767626744067045
+    second: KakaoTalk_20250616_113626189_78
+  - first:
+      213: -574473286134704885
+    second: KakaoTalk_20250616_113626189_79
+  - first:
+      213: -5399815753195989211
+    second: KakaoTalk_20250616_113626189_80
+  - first:
+      213: -7870534711168744590
+    second: KakaoTalk_20250616_113626189_81
+  - first:
+      213: 4326005646217165859
+    second: KakaoTalk_20250616_113626189_82
+  - first:
+      213: -4668707657824425274
+    second: KakaoTalk_20250616_113626189_83
+  - first:
+      213: -5956695449736127517
+    second: KakaoTalk_20250616_113626189_84
+  - first:
+      213: 7853467131677988074
+    second: KakaoTalk_20250616_113626189_85
+  - first:
+      213: 5265949806098875899
+    second: KakaoTalk_20250616_113626189_86
+  - first:
+      213: 1978849665381736043
+    second: KakaoTalk_20250616_113626189_87
+  - first:
+      213: -2996603105815844271
+    second: KakaoTalk_20250616_113626189_88
+  - first:
+      213: 2552049603577618635
+    second: KakaoTalk_20250616_113626189_89
+  - first:
+      213: -712117844117738523
+    second: KakaoTalk_20250616_113626189_90
+  - first:
+      213: 7591323304920257525
+    second: KakaoTalk_20250616_113626189_91
+  - first:
+      213: -3930855937464251684
+    second: KakaoTalk_20250616_113626189_92
+  - first:
+      213: -7916190106139853355
+    second: KakaoTalk_20250616_113626189_93
+  - first:
+      213: -1967931284858537603
+    second: KakaoTalk_20250616_113626189_94
+  - first:
+      213: 7328751056176403756
+    second: KakaoTalk_20250616_113626189_95
+  - first:
+      213: -6432743789465833935
+    second: KakaoTalk_20250616_113626189_96
+  - first:
+      213: -5682483887061606379
+    second: KakaoTalk_20250616_113626189_97
+  - first:
+      213: 5025256545860194874
+    second: KakaoTalk_20250616_113626189_98
+  - first:
+      213: -5782054843294433025
+    second: KakaoTalk_20250616_113626189_99
+  - first:
+      213: 867790585615281801
+    second: KakaoTalk_20250616_113626189_100
+  - first:
+      213: 5683652821254345333
+    second: KakaoTalk_20250616_113626189_101
+  - first:
+      213: -7674933374831410732
+    second: KakaoTalk_20250616_113626189_102
+  - first:
+      213: -4634511324316896628
+    second: KakaoTalk_20250616_113626189_103
+  - first:
+      213: -9071418260691751047
+    second: KakaoTalk_20250616_113626189_104
+  - first:
+      213: -696559641705891704
+    second: KakaoTalk_20250616_113626189_105
+  - first:
+      213: 2644107627097541270
+    second: KakaoTalk_20250616_113626189_106
+  - first:
+      213: -4675578288697096052
+    second: KakaoTalk_20250616_113626189_107
+  - first:
+      213: 9100366321782100214
+    second: KakaoTalk_20250616_113626189_108
+  - first:
+      213: -5513765272296001103
+    second: KakaoTalk_20250616_113626189_109
+  - first:
+      213: 3618408259506434086
+    second: KakaoTalk_20250616_113626189_110
+  - first:
+      213: 2347790923455918093
+    second: KakaoTalk_20250616_113626189_111
+  - first:
+      213: -3293043201673694184
+    second: KakaoTalk_20250616_113626189_112
+  - first:
+      213: 3828734879306172074
+    second: KakaoTalk_20250616_113626189_113
+  - first:
+      213: 8931821611475245491
+    second: KakaoTalk_20250616_113626189_114
+  - first:
+      213: 242454681033113553
+    second: KakaoTalk_20250616_113626189_115
+  - first:
+      213: -3988919166228259953
+    second: KakaoTalk_20250616_113626189_116
+  - first:
+      213: -1217273913224467717
+    second: KakaoTalk_20250616_113626189_117
+  - first:
+      213: -5473792350826988953
+    second: KakaoTalk_20250616_113626189_118
+  - first:
+      213: 1550750742854316225
+    second: KakaoTalk_20250616_113626189_119
+  - first:
+      213: -2442035015390985863
+    second: KakaoTalk_20250616_113626189_120
+  - first:
+      213: -942054412258972030
+    second: KakaoTalk_20250616_113626189_121
+  - first:
+      213: 6252777961288237046
+    second: KakaoTalk_20250616_113626189_122
+  - first:
+      213: -1978931541811090449
+    second: KakaoTalk_20250616_113626189_123
+  - first:
+      213: -287053799760509390
+    second: KakaoTalk_20250616_113626189_124
+  - first:
+      213: -4968619300634280140
+    second: KakaoTalk_20250616_113626189_125
+  - first:
+      213: -995504383283349789
+    second: KakaoTalk_20250616_113626189_126
+  - first:
+      213: -2897109672007311787
+    second: KakaoTalk_20250616_113626189_127
+  - first:
+      213: -6830943823358522656
+    second: KakaoTalk_20250616_113626189_128
+  - first:
+      213: 207128287940841214
+    second: KakaoTalk_20250616_113626189_129
+  - first:
+      213: 1137082269771490414
+    second: KakaoTalk_20250616_113626189_130
+  - first:
+      213: 6855838144760733961
+    second: KakaoTalk_20250616_113626189_131
+  - first:
+      213: -528421180213228215
+    second: KakaoTalk_20250616_113626189_132
+  - first:
+      213: 136225804558475725
+    second: KakaoTalk_20250616_113626189_133
+  - first:
+      213: -4630715159388736680
+    second: KakaoTalk_20250616_113626189_134
+  - first:
+      213: -4918152122890828608
+    second: KakaoTalk_20250616_113626189_135
+  - first:
+      213: -2294754545455978436
+    second: KakaoTalk_20250616_113626189_136
+  - first:
+      213: -3568916521415251778
+    second: KakaoTalk_20250616_113626189_137
+  - first:
+      213: 3130006260817966230
+    second: KakaoTalk_20250616_113626189_138
+  - first:
+      213: 8432717649710284304
+    second: KakaoTalk_20250616_113626189_139
+  - first:
+      213: -6152259684808736256
+    second: KakaoTalk_20250616_113626189_140
+  - first:
+      213: 7449954902435409907
+    second: KakaoTalk_20250616_113626189_141
+  - first:
+      213: -5835128437761028392
+    second: KakaoTalk_20250616_113626189_142
+  - first:
+      213: 6564629611411338063
+    second: KakaoTalk_20250616_113626189_143
+  - first:
+      213: 18897286682498387
+    second: KakaoTalk_20250616_113626189_144
+  - first:
+      213: -2095952637664371596
+    second: KakaoTalk_20250616_113626189_145
+  - first:
+      213: -6367335051323507367
+    second: KakaoTalk_20250616_113626189_146
+  - first:
+      213: 5441612100749270961
+    second: KakaoTalk_20250616_113626189_147
+  - first:
+      213: 2563764135736444028
+    second: KakaoTalk_20250616_113626189_148
+  - first:
+      213: -3537889114885283688
+    second: KakaoTalk_20250616_113626189_149
+  - first:
+      213: 5449845687788680550
+    second: KakaoTalk_20250616_113626189_150
+  - first:
+      213: 6696694179206231005
+    second: KakaoTalk_20250616_113626189_151
+  - first:
+      213: -707521313963173454
+    second: KakaoTalk_20250616_113626189_152
+  - first:
+      213: 3384214389858868554
+    second: KakaoTalk_20250616_113626189_153
+  - first:
+      213: -394645044604230
+    second: KakaoTalk_20250616_113626189_154
+  - first:
+      213: 5716005774582567601
+    second: KakaoTalk_20250616_113626189_155
+  - first:
+      213: -3651812713127577341
+    second: KakaoTalk_20250616_113626189_156
+  - first:
+      213: 1971596341062818354
+    second: KakaoTalk_20250616_113626189_157
+  - first:
+      213: 4886393670605660461
+    second: KakaoTalk_20250616_113626189_158
+  - first:
+      213: 7909347374738630650
+    second: KakaoTalk_20250616_113626189_159
+  - first:
+      213: -6229481625900845484
+    second: KakaoTalk_20250616_113626189_160
+  - first:
+      213: -5604990231678422005
+    second: KakaoTalk_20250616_113626189_161
+  - first:
+      213: -6633596692627674291
+    second: KakaoTalk_20250616_113626189_162
+  - first:
+      213: 6088297253934169053
+    second: KakaoTalk_20250616_113626189_163
+  - first:
+      213: -6199311756412104210
+    second: KakaoTalk_20250616_113626189_164
+  - first:
+      213: 3557328030137816509
+    second: KakaoTalk_20250616_113626189_165
+  - first:
+      213: 1035228441837077716
+    second: KakaoTalk_20250616_113626189_166
+  - first:
+      213: 7593062096098825927
+    second: KakaoTalk_20250616_113626189_167
+  - first:
+      213: -9135348650535202504
+    second: KakaoTalk_20250616_113626189_168
+  - first:
+      213: 1208307506345579764
+    second: KakaoTalk_20250616_113626189_169
+  - first:
+      213: 6594035021035018521
+    second: KakaoTalk_20250616_113626189_170
+  - first:
+      213: 5976041828591767559
+    second: KakaoTalk_20250616_113626189_171
+  - first:
+      213: -740398853423484363
+    second: KakaoTalk_20250616_113626189_172
+  - first:
+      213: -8481268891478781158
+    second: KakaoTalk_20250616_113626189_173
+  - first:
+      213: -5787779859745307168
+    second: KakaoTalk_20250616_113626189_174
+  - first:
+      213: 147613985881155882
+    second: KakaoTalk_20250616_113626189_175
+  - first:
+      213: 2193658515585369185
+    second: KakaoTalk_20250616_113626189_176
+  - first:
+      213: 3581072029094805146
+    second: KakaoTalk_20250616_113626189_177
+  - first:
+      213: -4516180673917024979
+    second: KakaoTalk_20250616_113626189_178
+  - first:
+      213: -3076024188098274754
+    second: KakaoTalk_20250616_113626189_179
+  - first:
+      213: -3861594871606889970
+    second: KakaoTalk_20250616_113626189_180
+  - first:
+      213: 3637178701603264150
+    second: KakaoTalk_20250616_113626189_181
+  - first:
+      213: 9053467963713109653
+    second: KakaoTalk_20250616_113626189_182
+  - first:
+      213: 9221448876449016509
+    second: KakaoTalk_20250616_113626189_183
+  - first:
+      213: 2389235917390440472
+    second: KakaoTalk_20250616_113626189_184
+  - first:
+      213: 568352256949105039
+    second: KakaoTalk_20250616_113626189_185
+  - first:
+      213: -7849982653081134570
+    second: KakaoTalk_20250616_113626189_186
+  - first:
+      213: -7253235743007598348
+    second: KakaoTalk_20250616_113626189_187
+  - first:
+      213: -8005108069579835318
+    second: KakaoTalk_20250616_113626189_188
+  - first:
+      213: 7168875867883117204
+    second: KakaoTalk_20250616_113626189_189
+  - first:
+      213: -9185313029397527598
+    second: KakaoTalk_20250616_113626189_190
+  - first:
+      213: 8355619267937977733
+    second: KakaoTalk_20250616_113626189_191
+  - first:
+      213: 4768461141190707969
+    second: KakaoTalk_20250616_113626189_192
+  - first:
+      213: 5114399754542475304
+    second: KakaoTalk_20250616_113626189_193
+  - first:
+      213: 5944483710568640141
+    second: KakaoTalk_20250616_113626189_194
+  - first:
+      213: 4404264639250318752
+    second: KakaoTalk_20250616_113626189_195
+  - first:
+      213: 2632260120448319007
+    second: KakaoTalk_20250616_113626189_196
+  - first:
+      213: 6710937734548374970
+    second: KakaoTalk_20250616_113626189_197
+  - first:
+      213: -2484649463826978075
+    second: KakaoTalk_20250616_113626189_198
+  - first:
+      213: 3729718406427819163
+    second: KakaoTalk_20250616_113626189_199
+  - first:
+      213: -2113993467141700210
+    second: KakaoTalk_20250616_113626189_200
+  - first:
+      213: 6277861526429428574
+    second: KakaoTalk_20250616_113626189_201
+  - first:
+      213: 8647702339067154991
+    second: KakaoTalk_20250616_113626189_202
+  - first:
+      213: -4163104276583985190
+    second: KakaoTalk_20250616_113626189_203
+  - first:
+      213: -8657062823630649177
+    second: KakaoTalk_20250616_113626189_204
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 639
+        width: 216
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8fbeaea6e067a80800000000000000
+      internalID: -8469566196852983616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_7
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 639
+        width: 171
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c340f75c8b77e110800000000000000
+      internalID: 1290135660965938120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_31
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 637
+        width: 88
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463552c1015865ba0800000000000000
+      internalID: -6100542340988578972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_50
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 636
+        width: 184
+        height: 137
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2b7b2fb586cbcf0800000000000000
+      internalID: -235198336406670599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_54
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 637
+        width: 157
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b73f546ffcb4b50800000000000000
+      internalID: 6578580337347230509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_94
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 445
+        width: 88
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79f0a74ce080b4e0800000000000000
+      internalID: -1967931284858537603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_95
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 424
+        width: 254
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c25d9a69144f4b560800000000000000
+      internalID: 7328751056176403756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_96
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 443
+        width: 190
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ee9c90b9d4ab6a0800000000000000
+      internalID: -6432743789465833935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_100
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 445
+        width: 163
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ee60b90f20b0c00800000000000000
+      internalID: 867790585615281801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_122
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 273
+        width: 111
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fff9f95d6456c650800000000000000
+      internalID: 6252777961288237046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_124
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 273
+        width: 109
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23649d9071e240cf0800000000000000
+      internalID: -287053799760509390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_125
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 273
+        width: 343
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f3b89221beb0bb0800000000000000
+      internalID: -4968619300634280140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_128
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 273
+        width: 299
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea0118d8cc9331a0800000000000000
+      internalID: -6830943823358522656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_135
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 273
+        width: 328
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c442c3a3b63fbbb0800000000000000
+      internalID: -4918152122890828608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_137
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 83
+        width: 120
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8650c2559a87ec0800000000000000
+      internalID: -3568916521415251778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_138
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 83
+        width: 186
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694bdc85c14007b20800000000000000
+      internalID: 3130006260817966230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_139
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 4
+        width: 194
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ef5222608070570800000000000000
+      internalID: 8432717649710284304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_140
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 34
+        width: 126
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002c409a968ce9aa0800000000000000
+      internalID: -6152259684808736256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_141
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 47
+        width: 130
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ffa750238e836760800000000000000
+      internalID: 7449954902435409907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_142
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 201
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de49780a95750fa0800000000000000
+      internalID: -5835128437761028392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_143
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 53
+        width: 92
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f43fe26c9df3a1b50800000000000000
+      internalID: 6564629611411338063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_144
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 61
+        width: 118
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 355ddeb6bf2234000800000000000000
+      internalID: 18897286682498387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_145
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 9
+        width: 122
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47cd8fd4e2ea9e2e0800000000000000
+      internalID: -2095952637664371596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_146
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 106
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95df7f3a18ea2a7a0800000000000000
+      internalID: -6367335051323507367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_177
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 27
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e7841890682b130800000000000000
+      internalID: 3581072029094805146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_186
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 18
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ade163e524f0390800000000000000
+      internalID: -7849982653081134570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_187
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 19
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f89dd16584575b90800000000000000
+      internalID: -7253235743007598348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_188
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 19
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48b414af9428e090800000000000000
+      internalID: -8005108069579835318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_189
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 19
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a1b089e96fc7360800000000000000
+      internalID: 7168875867883117204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_194
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 1
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e2a85807c0f7250800000000000000
+      internalID: 5944483710568640141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_195
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 12
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a54457ca571f1d30800000000000000
+      internalID: 4404264639250318752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_196
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 8
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ebfbb12aaa78420800000000000000
+      internalID: 2632260120448319007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_197
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 0
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab54581405a022d50800000000000000
+      internalID: 6710937734548374970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_198
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 11
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea6a351a70c48dd0800000000000000
+      internalID: -2484649463826978075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_203
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 0
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf4d4fa7bea936c0800000000000000
+      internalID: -4163104276583985190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_204
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8414f9a3febd780800000000000000
+      internalID: -8657062823630649177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2e6e9bdc3c063bd48b3177418b24e41e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Blue_Ninja2_0: -1463626853
+      KakaoTalk_20250616_113626189_0: 4025571983267224713
+      KakaoTalk_20250616_113626189_1: 2511356379861922621
+      KakaoTalk_20250616_113626189_10: 811425777927270233
+      KakaoTalk_20250616_113626189_100: 867790585615281801
+      KakaoTalk_20250616_113626189_101: 5683652821254345333
+      KakaoTalk_20250616_113626189_102: -7674933374831410732
+      KakaoTalk_20250616_113626189_103: -4634511324316896628
+      KakaoTalk_20250616_113626189_104: -9071418260691751047
+      KakaoTalk_20250616_113626189_105: -696559641705891704
+      KakaoTalk_20250616_113626189_106: 2644107627097541270
+      KakaoTalk_20250616_113626189_107: -4675578288697096052
+      KakaoTalk_20250616_113626189_108: 9100366321782100214
+      KakaoTalk_20250616_113626189_109: -5513765272296001103
+      KakaoTalk_20250616_113626189_11: 3387500662594495168
+      KakaoTalk_20250616_113626189_110: 3618408259506434086
+      KakaoTalk_20250616_113626189_111: 2347790923455918093
+      KakaoTalk_20250616_113626189_112: -3293043201673694184
+      KakaoTalk_20250616_113626189_113: 3828734879306172074
+      KakaoTalk_20250616_113626189_114: 8931821611475245491
+      KakaoTalk_20250616_113626189_115: 242454681033113553
+      KakaoTalk_20250616_113626189_116: -3988919166228259953
+      KakaoTalk_20250616_113626189_117: -1217273913224467717
+      KakaoTalk_20250616_113626189_118: -5473792350826988953
+      KakaoTalk_20250616_113626189_119: 1550750742854316225
+      KakaoTalk_20250616_113626189_12: -6465242807533545835
+      KakaoTalk_20250616_113626189_120: -2442035015390985863
+      KakaoTalk_20250616_113626189_121: -942054412258972030
+      KakaoTalk_20250616_113626189_122: 6252777961288237046
+      KakaoTalk_20250616_113626189_123: -1978931541811090449
+      KakaoTalk_20250616_113626189_124: -287053799760509390
+      KakaoTalk_20250616_113626189_125: -4968619300634280140
+      KakaoTalk_20250616_113626189_126: -995504383283349789
+      KakaoTalk_20250616_113626189_127: -2897109672007311787
+      KakaoTalk_20250616_113626189_128: -6830943823358522656
+      KakaoTalk_20250616_113626189_129: 207128287940841214
+      KakaoTalk_20250616_113626189_13: -9030805950173839452
+      KakaoTalk_20250616_113626189_130: 1137082269771490414
+      KakaoTalk_20250616_113626189_131: 6855838144760733961
+      KakaoTalk_20250616_113626189_132: -528421180213228215
+      KakaoTalk_20250616_113626189_133: 136225804558475725
+      KakaoTalk_20250616_113626189_134: -4630715159388736680
+      KakaoTalk_20250616_113626189_135: -4918152122890828608
+      KakaoTalk_20250616_113626189_136: -2294754545455978436
+      KakaoTalk_20250616_113626189_137: -3568916521415251778
+      KakaoTalk_20250616_113626189_138: 3130006260817966230
+      KakaoTalk_20250616_113626189_139: 8432717649710284304
+      KakaoTalk_20250616_113626189_14: 7367607142932799638
+      KakaoTalk_20250616_113626189_140: -6152259684808736256
+      KakaoTalk_20250616_113626189_141: 7449954902435409907
+      KakaoTalk_20250616_113626189_142: -5835128437761028392
+      KakaoTalk_20250616_113626189_143: 6564629611411338063
+      KakaoTalk_20250616_113626189_144: 18897286682498387
+      KakaoTalk_20250616_113626189_145: -2095952637664371596
+      KakaoTalk_20250616_113626189_146: -6367335051323507367
+      KakaoTalk_20250616_113626189_147: 5441612100749270961
+      KakaoTalk_20250616_113626189_148: 2563764135736444028
+      KakaoTalk_20250616_113626189_149: -3537889114885283688
+      KakaoTalk_20250616_113626189_15: -7650514980008667177
+      KakaoTalk_20250616_113626189_150: 5449845687788680550
+      KakaoTalk_20250616_113626189_151: 6696694179206231005
+      KakaoTalk_20250616_113626189_152: -707521313963173454
+      KakaoTalk_20250616_113626189_153: 3384214389858868554
+      KakaoTalk_20250616_113626189_154: -394645044604230
+      KakaoTalk_20250616_113626189_155: 5716005774582567601
+      KakaoTalk_20250616_113626189_156: -3651812713127577341
+      KakaoTalk_20250616_113626189_157: 1971596341062818354
+      KakaoTalk_20250616_113626189_158: 4886393670605660461
+      KakaoTalk_20250616_113626189_159: 7909347374738630650
+      KakaoTalk_20250616_113626189_16: 3117113563383270927
+      KakaoTalk_20250616_113626189_160: -6229481625900845484
+      KakaoTalk_20250616_113626189_161: -5604990231678422005
+      KakaoTalk_20250616_113626189_162: -6633596692627674291
+      KakaoTalk_20250616_113626189_163: 6088297253934169053
+      KakaoTalk_20250616_113626189_164: -6199311756412104210
+      KakaoTalk_20250616_113626189_165: 3557328030137816509
+      KakaoTalk_20250616_113626189_166: 1035228441837077716
+      KakaoTalk_20250616_113626189_167: 7593062096098825927
+      KakaoTalk_20250616_113626189_168: -9135348650535202504
+      KakaoTalk_20250616_113626189_169: 1208307506345579764
+      KakaoTalk_20250616_113626189_17: -7249807014143448910
+      KakaoTalk_20250616_113626189_170: 6594035021035018521
+      KakaoTalk_20250616_113626189_171: 5976041828591767559
+      KakaoTalk_20250616_113626189_172: -740398853423484363
+      KakaoTalk_20250616_113626189_173: -8481268891478781158
+      KakaoTalk_20250616_113626189_174: -5787779859745307168
+      KakaoTalk_20250616_113626189_175: 147613985881155882
+      KakaoTalk_20250616_113626189_176: 2193658515585369185
+      KakaoTalk_20250616_113626189_177: 3581072029094805146
+      KakaoTalk_20250616_113626189_178: -4516180673917024979
+      KakaoTalk_20250616_113626189_179: -3076024188098274754
+      KakaoTalk_20250616_113626189_18: -331123208867582212
+      KakaoTalk_20250616_113626189_180: -3861594871606889970
+      KakaoTalk_20250616_113626189_181: 3637178701603264150
+      KakaoTalk_20250616_113626189_182: 9053467963713109653
+      KakaoTalk_20250616_113626189_183: 9221448876449016509
+      KakaoTalk_20250616_113626189_184: 2389235917390440472
+      KakaoTalk_20250616_113626189_185: 568352256949105039
+      KakaoTalk_20250616_113626189_186: -7849982653081134570
+      KakaoTalk_20250616_113626189_187: -7253235743007598348
+      KakaoTalk_20250616_113626189_188: -8005108069579835318
+      KakaoTalk_20250616_113626189_189: 7168875867883117204
+      KakaoTalk_20250616_113626189_19: -5662154120905742924
+      KakaoTalk_20250616_113626189_190: -9185313029397527598
+      KakaoTalk_20250616_113626189_191: 8355619267937977733
+      KakaoTalk_20250616_113626189_192: 4768461141190707969
+      KakaoTalk_20250616_113626189_193: 5114399754542475304
+      KakaoTalk_20250616_113626189_194: 5944483710568640141
+      KakaoTalk_20250616_113626189_195: 4404264639250318752
+      KakaoTalk_20250616_113626189_196: 2632260120448319007
+      KakaoTalk_20250616_113626189_197: 6710937734548374970
+      KakaoTalk_20250616_113626189_198: -2484649463826978075
+      KakaoTalk_20250616_113626189_199: 3729718406427819163
+      KakaoTalk_20250616_113626189_2: -8469566196852983616
+      KakaoTalk_20250616_113626189_20: -7600873559987594166
+      KakaoTalk_20250616_113626189_200: -2113993467141700210
+      KakaoTalk_20250616_113626189_201: 6277861526429428574
+      KakaoTalk_20250616_113626189_202: 8647702339067154991
+      KakaoTalk_20250616_113626189_203: -4163104276583985190
+      KakaoTalk_20250616_113626189_204: -8657062823630649177
+      KakaoTalk_20250616_113626189_21: 585029479478094308
+      KakaoTalk_20250616_113626189_22: 8771334181544639880
+      KakaoTalk_20250616_113626189_23: 5578668541825145811
+      KakaoTalk_20250616_113626189_24: 2992076592435150767
+      KakaoTalk_20250616_113626189_25: -5758479640732449595
+      KakaoTalk_20250616_113626189_26: -3590431173135177295
+      KakaoTalk_20250616_113626189_27: 5392382131522886593
+      KakaoTalk_20250616_113626189_28: 4205960985728119248
+      KakaoTalk_20250616_113626189_29: 1726994492743952093
+      KakaoTalk_20250616_113626189_3: 6757032145146712370
+      KakaoTalk_20250616_113626189_30: -6543945728064993713
+      KakaoTalk_20250616_113626189_31: -6100542340988578972
+      KakaoTalk_20250616_113626189_32: -1165464072155578676
+      KakaoTalk_20250616_113626189_33: -3524316156754618412
+      KakaoTalk_20250616_113626189_34: 2255297537716356838
+      KakaoTalk_20250616_113626189_35: -5331866165790092719
+      KakaoTalk_20250616_113626189_36: -5197975780028815590
+      KakaoTalk_20250616_113626189_37: 2672816098942975095
+      KakaoTalk_20250616_113626189_38: 6369869643473760421
+      KakaoTalk_20250616_113626189_39: 8845409184619817277
+      KakaoTalk_20250616_113626189_4: 3372045707025238153
+      KakaoTalk_20250616_113626189_40: 6432980287294074960
+      KakaoTalk_20250616_113626189_41: 4802029057241126118
+      KakaoTalk_20250616_113626189_42: -5799792874544002025
+      KakaoTalk_20250616_113626189_43: 5357558106997249334
+      KakaoTalk_20250616_113626189_44: 3461718420689252007
+      KakaoTalk_20250616_113626189_45: -4141431478685459125
+      KakaoTalk_20250616_113626189_46: 10138436030549429
+      KakaoTalk_20250616_113626189_47: -4774003161245868199
+      KakaoTalk_20250616_113626189_48: 6407157944746464149
+      KakaoTalk_20250616_113626189_49: -5097290893860962844
+      KakaoTalk_20250616_113626189_5: 1224419525969674747
+      KakaoTalk_20250616_113626189_50: -235198336406670599
+      KakaoTalk_20250616_113626189_51: -3902335871741253820
+      KakaoTalk_20250616_113626189_52: -8416524969028513334
+      KakaoTalk_20250616_113626189_53: 3121170258742608633
+      KakaoTalk_20250616_113626189_54: 6578580337347230509
+      KakaoTalk_20250616_113626189_55: -4286402212813775013
+      KakaoTalk_20250616_113626189_56: -5659006732648271945
+      KakaoTalk_20250616_113626189_57: -8881833378856105984
+      KakaoTalk_20250616_113626189_58: -4094688957515020534
+      KakaoTalk_20250616_113626189_59: -2936182650445560892
+      KakaoTalk_20250616_113626189_6: 8421814517711928880
+      KakaoTalk_20250616_113626189_60: 8628736661902491720
+      KakaoTalk_20250616_113626189_61: 3761996614378741173
+      KakaoTalk_20250616_113626189_62: -5913962687447872446
+      KakaoTalk_20250616_113626189_63: -2006189171149873920
+      KakaoTalk_20250616_113626189_64: -1490744761227527801
+      KakaoTalk_20250616_113626189_65: -6803146841944259430
+      KakaoTalk_20250616_113626189_66: -8114845274839617070
+      KakaoTalk_20250616_113626189_67: -6270360228133432601
+      KakaoTalk_20250616_113626189_68: -5569072898962221909
+      KakaoTalk_20250616_113626189_69: -8138586705819059651
+      KakaoTalk_20250616_113626189_7: 1290135660965938120
+      KakaoTalk_20250616_113626189_70: -4750353598894453730
+      KakaoTalk_20250616_113626189_71: 4704589153010598247
+      KakaoTalk_20250616_113626189_72: -8649836802216287169
+      KakaoTalk_20250616_113626189_73: -2915424313428331249
+      KakaoTalk_20250616_113626189_74: -4027158414093129329
+      KakaoTalk_20250616_113626189_75: -1518269164454955951
+      KakaoTalk_20250616_113626189_76: -8503222730819957724
+      KakaoTalk_20250616_113626189_77: -3118746384653512095
+      KakaoTalk_20250616_113626189_78: 6925767626744067045
+      KakaoTalk_20250616_113626189_79: -574473286134704885
+      KakaoTalk_20250616_113626189_8: -1787590156270724970
+      KakaoTalk_20250616_113626189_80: -5399815753195989211
+      KakaoTalk_20250616_113626189_81: -7870534711168744590
+      KakaoTalk_20250616_113626189_82: 4326005646217165859
+      KakaoTalk_20250616_113626189_83: -4668707657824425274
+      KakaoTalk_20250616_113626189_84: -5956695449736127517
+      KakaoTalk_20250616_113626189_85: 7853467131677988074
+      KakaoTalk_20250616_113626189_86: 5265949806098875899
+      KakaoTalk_20250616_113626189_87: 1978849665381736043
+      KakaoTalk_20250616_113626189_88: -2996603105815844271
+      KakaoTalk_20250616_113626189_89: 2552049603577618635
+      KakaoTalk_20250616_113626189_9: 5564572450897471731
+      KakaoTalk_20250616_113626189_90: -712117844117738523
+      KakaoTalk_20250616_113626189_91: 7591323304920257525
+      KakaoTalk_20250616_113626189_92: -3930855937464251684
+      KakaoTalk_20250616_113626189_93: -7916190106139853355
+      KakaoTalk_20250616_113626189_94: -1967931284858537603
+      KakaoTalk_20250616_113626189_95: 7328751056176403756
+      KakaoTalk_20250616_113626189_96: -6432743789465833935
+      KakaoTalk_20250616_113626189_97: -5682483887061606379
+      KakaoTalk_20250616_113626189_98: 5025256545860194874
+      KakaoTalk_20250616_113626189_99: -5782054843294433025
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
