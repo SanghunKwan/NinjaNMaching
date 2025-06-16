@@ -24,6 +24,7 @@ public class CardObj : MonoBehaviour
         //_icon = _frontSide.transform.GetChild(0).GetComponent<SpriteRenderer>();
         _myNO = no;
         _cardBG.sprite = ResourcePoolManager._instance.Get<Sprite>(PoolDataType.CARDIMAGEBG, (int)bg);
+        _icon.sprite = ResourcePoolManager._instance.Get<Sprite>(PoolDataType.CARDIMAGEICON, (int)type);
 
     }
 }

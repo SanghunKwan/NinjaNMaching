@@ -5,12 +5,10 @@ using DefineEnum;
 public class ResourcePoolManager : TSingleton<ResourcePoolManager>
 {
     Dictionary<PoolDataType, Dictionary<string, object>> _allPooldatas;
-    Dictionary<CardIconType, Dictionary<string, object>> _allIconDatas;
 
     public void AllLoad()
     {
         _allPooldatas = new Dictionary<PoolDataType, Dictionary<string, object>>();
-        _allIconDatas = new Dictionary<CardIconType, Dictionary<string, object>>();
 
         LoadCardBG();
         LoadCardIcon();
@@ -40,10 +38,11 @@ public class ResourcePoolManager : TSingleton<ResourcePoolManager>
         int length = iconNames.Length;
         for (int i = 0; i < length; i++)
         {
-            Sprite iconImage = Resources.Load("Images/FantasyIcon/" + iconNames[i]) as Sprite;
+            Sprite iconImage = Resources.Load<Sprite>($"Images/FantasyIcon/{iconNames[i]}");
+            Debug.Log(iconImage);
             iconImages.Add(i.ToString(), iconImage);
         }
-        //_allIconDatas.Add( ,iconImages);
+        _allPooldatas.Add(PoolDataType.CARDIMAGEICON, iconImages);
     }
 
     public T Get<T>(PoolDataType type, string index)
