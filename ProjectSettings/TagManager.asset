@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - PosRoot
   layers:
   - Default
   - TransparentFX
@@ -38,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Board
+    uniqueID: 2476721813
+    locked: 0
   - name: Card
     uniqueID: 3804015471
     locked: 0
