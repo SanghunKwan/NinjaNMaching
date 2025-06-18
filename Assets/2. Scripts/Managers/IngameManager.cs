@@ -2,12 +2,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using DefineEnum;
 using System.Collections;
+using DefineStructure;
 
 public class IngameManager : MonoBehaviour
 {
     static IngameManager _uniqueInstance;
 
     const int _limitWidth = 6;
+    const float _cardGenDelayTime = 0.1f;
     Vector2 _offset = new Vector2(1.6f, -2.1f);
 
 
@@ -20,8 +22,13 @@ public class IngameManager : MonoBehaviour
     int _secondIndex = -1;
     int _choiceCount;
 
+    GameState _currentState;
+    StageInfo _stageInfo;
+
     //Datas
     List<CardObj> _genCardList;
+
+    public GameState _nowState => _currentState;
     public bool _isChoiceEnd => _choiceCount == 2;
 
     public static IngameManager _instance => _uniqueInstance;
@@ -30,42 +37,52 @@ public class IngameManager : MonoBehaviour
     {
         _uniqueInstance = this;
     }
+
     private void Start()
     {
-        _prefabCard = Resources.Load<GameObject>("Prefabs/Objects/CardObject");
-        GameObject go = GameObject.FindGameObjectWithTag("PosRoot");
-        _cardRoot = go.transform;
-        StartCoroutine(GenerateCard(30, 0.10f));
+        InitLoadGame(1);
+
+
     }
     private void Update()
     {
-        if (_choiceCount == 2)
+        switch (_currentState)
         {
-            if (_genCardList[_firstIndex]._isOpened && _genCardList[_secondIndex]._isOpened)
-            {
-                if (MatchedCard(_firstIndex, _secondIndex))
+            case GameState.INITLOAD:
+                if (Input.anyKey)
+                    CardDeploy();
+                break;
+            case GameState.PLAYGAME:
+                if (_choiceCount == 2)
                 {
-                    //삭제
-                    Debug.LogFormat("{0}번 카드와 {1}번 카드가 삭제되었습니다.", _firstIndex, _secondIndex);
+                    if (_genCardList[_firstIndex]._isOpened && _genCardList[_secondIndex]._isOpened)
+                    {
+                        if (MatchedCard(_firstIndex, _secondIndex))
+                        {
+                            //삭제
+                            Debug.LogFormat("{0}번 카드와 {1}번 카드가 삭제되었습니다.", _firstIndex, _secondIndex);
 
-                    Destroy(_genCardList[_firstIndex].gameObject);
-                    Destroy(_genCardList[_secondIndex].gameObject);
+                            Destroy(_genCardList[_firstIndex].gameObject);
+                            Destroy(_genCardList[_secondIndex].gameObject);
 
-                    _choiceCount = 0;
-                    _firstIndex = _secondIndex = -1;
+                            _choiceCount = 0;
+                            _firstIndex = _secondIndex = -1;
+                        }
+                        else
+                        {
+                            _genCardList[_firstIndex].CloseCard();
+                            _genCardList[_secondIndex].CloseCard();
+                        }
+                    }
+                    else if (_genCardList[_firstIndex]._isClosed && _genCardList[_secondIndex]._isClosed)
+                    {
+                        _choiceCount = 0;
+                        _firstIndex = _secondIndex = -1;
+                    }
                 }
-                else
-                {
-                    _genCardList[_firstIndex].CloseCard();
-                    _genCardList[_secondIndex].CloseCard();
-                }
-            }
-            else if (_genCardList[_firstIndex]._isClosed && _genCardList[_secondIndex]._isClosed)
-            {
-                _choiceCount = 0;
-                _firstIndex = _secondIndex = -1;
-            }
+                break;
         }
+
     }
 
     //카드 관련 함수 모음
@@ -94,6 +111,8 @@ public class IngameManager : MonoBehaviour
 
             yield return new WaitForSeconds(delay);
         }
+
+        PlayGame();
     }
     int[] GetShuffleCard(int typeCount)
     {
@@ -179,5 +198,48 @@ public class IngameManager : MonoBehaviour
                 _choiceCount = 2;
             }
         }
+    }
+    //카드 관련 모음(end)
+
+    void SettingInfoValues(int stage)
+    {
+        TableBase stageTable = GameTableManager._instance.Get(InfoTableName.StageInfoList);
+        TableBase spawnTable = GameTableManager._instance.Get(InfoTableName.MonsterSpawnList);
+
+        int spawnIndex = stageTable.ToInt(stage, "SpawnIndex");
+        int[] indexList = new int[spawnTable.ToInt(spawnIndex, "MonsterCount")];
+        for (int i = 0; i < indexList.Length; i++)
+        {
+            string column = "MonsterIndex" + (i + 1);
+            indexList[i] = spawnTable.ToInt(spawnIndex, column);
+        }
+        string name = stageTable.ToStr(stage, "StageName");
+        float t = stageTable.ToFloat(stage, "LimitTime");
+        int xp = stageTable.ToInt(stage, "AccquisitionXP");
+        int con1 = stageTable.ToInt(stage, "Condition1");
+        int con2 = stageTable.ToInt(stage, "Condition2");
+        int cnt = stageTable.ToInt(stage, "CardCount");
+
+        _stageInfo = new StageInfo(name, t, cnt, xp, con1, con2, indexList);
+    }
+    public void InitLoadGame(int stage)
+    {
+        _currentState = GameState.INITLOAD;
+
+        _prefabCard = Resources.Load<GameObject>("Prefabs/Objects/CardObject");
+        GameObject go = GameObject.FindGameObjectWithTag("PosRoot");
+        _cardRoot = go.transform;
+
+        SettingInfoValues(stage);
+    }
+    public void CardDeploy()
+    {
+        _currentState = GameState.CARDDEPLOY;
+
+        StartCoroutine(GenerateCard(_stageInfo._cardCount, _cardGenDelayTime));
+    }
+    public void PlayGame()
+    {
+        _currentState = GameState.PLAYGAME;
     }
 }

@@ -2,11 +2,50 @@ using UnityEngine;
 
 namespace DefineEnum
 {
+    #region [Manager Define]
+    public enum GameState
+    {
+        INITLOAD,
+        CARDDEPLOY,
+        PLAYGAME
+    }
+    public enum InfoTableName
+    {
+        MonsterInfoList,
+        MonsterSpawnList,
+        StageInfoList,
+
+        Max
+    }
     public enum PoolDataType
     {
         CARDIMAGEBG,
         CARDIMAGEICON,
     }
+    #endregion[Manager Define]
+
+    #region [캐릭터 Define]
+    public enum MonsterGrade
+    {
+        Common,
+        Rare,
+        Elite,
+        Boss
+    }
+    public enum AniActionState
+    {
+        IDLE,
+        ATTACK,
+        HIT,
+        SPECIAL,
+        ENTRY1,
+        ENTRY2,
+        DIE,
+    }
+
+    #endregion[캐릭터 Define]
+
+    #region [카드 Define]
     public enum CardBGKind
     {
         CARD_BG_NORMAL = 0,
@@ -60,4 +99,5 @@ namespace DefineEnum
 
         Max
     }
+    #endregion[카드 Define]
 }

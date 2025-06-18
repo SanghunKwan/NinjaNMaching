@@ -139,6 +139,8 @@ public class CardObj : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (IngameManager._instance._nowState != GameState.PLAYGAME) return;
+
         if (_isRolling || IngameManager._instance._isChoiceEnd) return;
 
         OpenCard();

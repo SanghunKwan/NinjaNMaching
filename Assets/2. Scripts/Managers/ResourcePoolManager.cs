@@ -39,7 +39,6 @@ public class ResourcePoolManager : TSingleton<ResourcePoolManager>
         for (int i = 0; i < length; i++)
         {
             Sprite iconImage = Resources.Load<Sprite>($"Images/FantasyIcon/{iconNames[i]}");
-            Debug.Log(iconImage);
             iconImages.Add(i.ToString(), iconImage);
         }
         _allPooldatas.Add(PoolDataType.CARDIMAGEICON, iconImages);
