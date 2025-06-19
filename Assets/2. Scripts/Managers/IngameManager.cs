@@ -16,6 +16,7 @@ public class IngameManager : MonoBehaviour
     //참조 변수
     GameObject _prefabCard;
     Transform _cardRoot;
+    Transform _mapPosition;
 
     //정보 변수
     int _firstIndex = -1;
@@ -214,13 +215,14 @@ public class IngameManager : MonoBehaviour
             indexList[i] = spawnTable.ToInt(spawnIndex, column);
         }
         string name = stageTable.ToStr(stage, "StageName");
+        string map = stageTable.ToStr(stage, "MapName");
         float t = stageTable.ToFloat(stage, "LimitTime");
         int xp = stageTable.ToInt(stage, "AccquisitionXP");
         int con1 = stageTable.ToInt(stage, "Condition1");
         int con2 = stageTable.ToInt(stage, "Condition2");
         int cnt = stageTable.ToInt(stage, "CardCount");
 
-        _stageInfo = new StageInfo(name, t, cnt, xp, con1, con2, indexList);
+        _stageInfo = new StageInfo(name, map, t, cnt, xp, con1, con2, indexList);
     }
     public void InitLoadGame(int stage)
     {
@@ -229,8 +231,13 @@ public class IngameManager : MonoBehaviour
         _prefabCard = Resources.Load<GameObject>("Prefabs/Objects/CardObject");
         GameObject go = GameObject.FindGameObjectWithTag("PosRoot");
         _cardRoot = go.transform;
+        go = GameObject.FindGameObjectWithTag("MapPos");
+        _mapPosition = go.transform;
 
         SettingInfoValues(stage);
+
+        GameObject map = Resources.Load("Prefabs/Maps/" + _stageInfo._mapName) as GameObject;
+        Instantiate(map, _mapPosition);
     }
     public void CardDeploy()
     {

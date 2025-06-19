@@ -35,12 +35,17 @@ namespace DefineEnum
     public enum AniActionState
     {
         IDLE,
-        ATTACK,
+        ATTACK1,
+        ATTACK2,
         HIT,
-        SPECIAL,
+        SPECIAL1,
+        SPECIAL2,
         ENTRY1,
         ENTRY2,
-        DIE,
+
+
+
+        DIE = 50,
     }
 
     #endregion[Ä³¸¯ÅÍ Define]

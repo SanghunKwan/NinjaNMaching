@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - PosRoot
+  - MapPos
   layers:
   - Default
   - TransparentFX
@@ -39,6 +40,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: MapFar
+    uniqueID: 3829798933
+    locked: 0
+  - name: Monster
+    uniqueID: 1768833491
+    locked: 0
+  - name: Hero
+    uniqueID: 3168176873
+    locked: 0
+  - name: MapNear
+    uniqueID: 1078231687
+    locked: 0
   - name: Board
     uniqueID: 2476721813
     locked: 0

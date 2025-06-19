@@ -19,6 +19,7 @@ namespace DefineStructure
     public struct StageInfo
     {
         public string _stageName;
+        public string _mapName;
         public float _penaltyTime;
         public int _cardCount;
         public Queue<int> _monIndexList;
@@ -26,9 +27,10 @@ namespace DefineStructure
         public StageClearInfo _clearCon;
 
 
-        public StageInfo(string name, float time, int cnt, int xp, int con1, int con2, params int[] idx)
+        public StageInfo(string name, string map, float time, int cnt, int xp, int con1, int con2, params int[] idx)
         {
             _stageName = name;
+            _mapName = map;
             _penaltyTime = time;
             _cardCount = cnt;
             _rewardXP = xp;

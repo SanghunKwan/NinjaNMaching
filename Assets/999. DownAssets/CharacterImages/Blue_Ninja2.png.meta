@@ -738,15 +738,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_2
+      name: KakaoTalk_20250616_113626189_3
       rect:
         serializedVersion: 2
         x: 471
         y: 639
         width: 216
         height: 184
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32407406, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -760,15 +760,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_7
+      name: KakaoTalk_20250616_113626189_2
       rect:
         serializedVersion: 2
         x: 295
         y: 639
         width: 171
         height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.25730994, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -782,15 +782,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_31
+      name: KakaoTalk_20250616_113626189_1
       rect:
         serializedVersion: 2
         x: 156
-        y: 637
+        y: 639
         width: 88
-        height: 150
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -804,15 +804,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_50
+      name: KakaoTalk_20250616_113626189_4
       rect:
         serializedVersion: 2
-        x: 743
-        y: 636
+        x: 744
+        y: 639
         width: 184
-        height: 137
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 134
+      alignment: 9
+      pivot: {x: 0.29891303, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -826,15 +826,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_54
+      name: KakaoTalk_20250616_113626189_5
       rect:
         serializedVersion: 2
         x: 975
-        y: 637
+        y: 639
         width: 157
         height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.31847134, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -848,15 +848,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_94
+      name: KakaoTalk_20250616_113626189_6
       rect:
         serializedVersion: 2
         x: 203
         y: 445
         width: 88
-        height: 148
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -870,15 +870,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_95
+      name: KakaoTalk_20250616_113626189_7
       rect:
         serializedVersion: 2
-        x: 353
-        y: 424
+        x: 354
+        y: 445
         width: 254
-        height: 185
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 156
+      alignment: 9
+      pivot: {x: 0.47637796, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -892,15 +892,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_96
+      name: KakaoTalk_20250616_113626189_8
       rect:
         serializedVersion: 2
         x: 659
-        y: 443
+        y: 445
         width: 190
         height: 152
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.6315789, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -914,15 +914,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_100
+      name: KakaoTalk_20250616_113626189_9
       rect:
         serializedVersion: 2
         x: 931
         y: 445
         width: 163
         height: 138
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5644172, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -936,15 +936,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_122
+      name: KakaoTalk_20250616_113626189_10
       rect:
         serializedVersion: 2
         x: 40
         y: 273
-        width: 111
+        width: 88
         height: 147
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -958,15 +958,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_124
+      name: KakaoTalk_20250616_113626189_11
       rect:
         serializedVersion: 2
-        x: 150
+        x: 160
         y: 273
-        width: 109
+        width: 104
         height: 145
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -980,15 +980,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_125
+      name: KakaoTalk_20250616_113626189_12
       rect:
         serializedVersion: 2
         x: 274
         y: 273
-        width: 343
+        width: 345
         height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4289855, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1002,15 +1002,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_128
+      name: KakaoTalk_20250616_113626189_13
       rect:
         serializedVersion: 2
-        x: 630
-        y: 273
+        x: 631
+        y: 274
         width: 299
         height: 142
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.35451505, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1024,15 +1024,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_135
+      name: KakaoTalk_20250616_113626189_14
       rect:
         serializedVersion: 2
         x: 949
         y: 273
-        width: 328
+        width: 217
         height: 136
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.2857143, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1046,15 +1046,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_137
+      name: KakaoTalk_20250616_113626189_17
       rect:
         serializedVersion: 2
         x: 26
         y: 83
         width: 120
         height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1068,15 +1068,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_138
+      name: KakaoTalk_20250616_113626189_18
       rect:
         serializedVersion: 2
         x: 167
         y: 83
         width: 186
         height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.32258064, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1090,15 +1090,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_139
+      name: KakaoTalk_20250616_113626189_19
       rect:
         serializedVersion: 2
-        x: 367
+        x: 368
         y: 4
         width: 194
         height: 207
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.34020618, y: 0.38164252}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1112,15 +1112,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_140
+      name: KakaoTalk_20250616_113626189_20
       rect:
         serializedVersion: 2
         x: 579
-        y: 34
+        y: 33
         width: 126
         height: 177
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.28248587}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1134,15 +1134,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KakaoTalk_20250616_113626189_141
+      name: KakaoTalk_20250616_113626189_21
       rect:
         serializedVersion: 2
         x: 719
         y: 47
         width: 130
         height: 164
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4923077, y: 0.2195122}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1243,6 +1243,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: KakaoTalk_20250616_113626189_16
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 273
+        width: 94
+        height: 134
+      alignment: 9
+      pivot: {x: 0.3925532, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526169a2fe312d045942178cc8ece769
+      internalID: -7650514980008667177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1257,11 +1279,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Blue_Ninja2_0: -1463626853
       KakaoTalk_20250616_113626189_0: 4025571983267224713
-      KakaoTalk_20250616_113626189_1: 2511356379861922621
-      KakaoTalk_20250616_113626189_10: 811425777927270233
-      KakaoTalk_20250616_113626189_100: 867790585615281801
+      KakaoTalk_20250616_113626189_1: -6100542340988578972
+      KakaoTalk_20250616_113626189_10: 6252777961288237046
       KakaoTalk_20250616_113626189_101: 5683652821254345333
       KakaoTalk_20250616_113626189_102: -7674933374831410732
       KakaoTalk_20250616_113626189_103: -4634511324316896628
@@ -1271,7 +1291,7 @@ TextureImporter:
       KakaoTalk_20250616_113626189_107: -4675578288697096052
       KakaoTalk_20250616_113626189_108: 9100366321782100214
       KakaoTalk_20250616_113626189_109: -5513765272296001103
-      KakaoTalk_20250616_113626189_11: 3387500662594495168
+      KakaoTalk_20250616_113626189_11: -287053799760509390
       KakaoTalk_20250616_113626189_110: 3618408259506434086
       KakaoTalk_20250616_113626189_111: 2347790923455918093
       KakaoTalk_20250616_113626189_112: -3293043201673694184
@@ -1282,31 +1302,21 @@ TextureImporter:
       KakaoTalk_20250616_113626189_117: -1217273913224467717
       KakaoTalk_20250616_113626189_118: -5473792350826988953
       KakaoTalk_20250616_113626189_119: 1550750742854316225
-      KakaoTalk_20250616_113626189_12: -6465242807533545835
+      KakaoTalk_20250616_113626189_12: -4968619300634280140
       KakaoTalk_20250616_113626189_120: -2442035015390985863
       KakaoTalk_20250616_113626189_121: -942054412258972030
-      KakaoTalk_20250616_113626189_122: 6252777961288237046
       KakaoTalk_20250616_113626189_123: -1978931541811090449
-      KakaoTalk_20250616_113626189_124: -287053799760509390
-      KakaoTalk_20250616_113626189_125: -4968619300634280140
       KakaoTalk_20250616_113626189_126: -995504383283349789
       KakaoTalk_20250616_113626189_127: -2897109672007311787
-      KakaoTalk_20250616_113626189_128: -6830943823358522656
       KakaoTalk_20250616_113626189_129: 207128287940841214
-      KakaoTalk_20250616_113626189_13: -9030805950173839452
+      KakaoTalk_20250616_113626189_13: -6830943823358522656
       KakaoTalk_20250616_113626189_130: 1137082269771490414
       KakaoTalk_20250616_113626189_131: 6855838144760733961
       KakaoTalk_20250616_113626189_132: -528421180213228215
       KakaoTalk_20250616_113626189_133: 136225804558475725
       KakaoTalk_20250616_113626189_134: -4630715159388736680
-      KakaoTalk_20250616_113626189_135: -4918152122890828608
       KakaoTalk_20250616_113626189_136: -2294754545455978436
-      KakaoTalk_20250616_113626189_137: -3568916521415251778
-      KakaoTalk_20250616_113626189_138: 3130006260817966230
-      KakaoTalk_20250616_113626189_139: 8432717649710284304
-      KakaoTalk_20250616_113626189_14: 7367607142932799638
-      KakaoTalk_20250616_113626189_140: -6152259684808736256
-      KakaoTalk_20250616_113626189_141: 7449954902435409907
+      KakaoTalk_20250616_113626189_14: -4918152122890828608
       KakaoTalk_20250616_113626189_142: -5835128437761028392
       KakaoTalk_20250616_113626189_143: 6564629611411338063
       KakaoTalk_20250616_113626189_144: 18897286682498387
@@ -1315,7 +1325,6 @@ TextureImporter:
       KakaoTalk_20250616_113626189_147: 5441612100749270961
       KakaoTalk_20250616_113626189_148: 2563764135736444028
       KakaoTalk_20250616_113626189_149: -3537889114885283688
-      KakaoTalk_20250616_113626189_15: -7650514980008667177
       KakaoTalk_20250616_113626189_150: 5449845687788680550
       KakaoTalk_20250616_113626189_151: 6696694179206231005
       KakaoTalk_20250616_113626189_152: -707521313963173454
@@ -1326,7 +1335,7 @@ TextureImporter:
       KakaoTalk_20250616_113626189_157: 1971596341062818354
       KakaoTalk_20250616_113626189_158: 4886393670605660461
       KakaoTalk_20250616_113626189_159: 7909347374738630650
-      KakaoTalk_20250616_113626189_16: 3117113563383270927
+      KakaoTalk_20250616_113626189_16: -7650514980008667177
       KakaoTalk_20250616_113626189_160: -6229481625900845484
       KakaoTalk_20250616_113626189_161: -5604990231678422005
       KakaoTalk_20250616_113626189_162: -6633596692627674291
@@ -1337,7 +1346,7 @@ TextureImporter:
       KakaoTalk_20250616_113626189_167: 7593062096098825927
       KakaoTalk_20250616_113626189_168: -9135348650535202504
       KakaoTalk_20250616_113626189_169: 1208307506345579764
-      KakaoTalk_20250616_113626189_17: -7249807014143448910
+      KakaoTalk_20250616_113626189_17: -3568916521415251778
       KakaoTalk_20250616_113626189_170: 6594035021035018521
       KakaoTalk_20250616_113626189_171: 5976041828591767559
       KakaoTalk_20250616_113626189_172: -740398853423484363
@@ -1348,7 +1357,7 @@ TextureImporter:
       KakaoTalk_20250616_113626189_177: 3581072029094805146
       KakaoTalk_20250616_113626189_178: -4516180673917024979
       KakaoTalk_20250616_113626189_179: -3076024188098274754
-      KakaoTalk_20250616_113626189_18: -331123208867582212
+      KakaoTalk_20250616_113626189_18: 3130006260817966230
       KakaoTalk_20250616_113626189_180: -3861594871606889970
       KakaoTalk_20250616_113626189_181: 3637178701603264150
       KakaoTalk_20250616_113626189_182: 9053467963713109653
@@ -1359,7 +1368,7 @@ TextureImporter:
       KakaoTalk_20250616_113626189_187: -7253235743007598348
       KakaoTalk_20250616_113626189_188: -8005108069579835318
       KakaoTalk_20250616_113626189_189: 7168875867883117204
-      KakaoTalk_20250616_113626189_19: -5662154120905742924
+      KakaoTalk_20250616_113626189_19: 8432717649710284304
       KakaoTalk_20250616_113626189_190: -9185313029397527598
       KakaoTalk_20250616_113626189_191: 8355619267937977733
       KakaoTalk_20250616_113626189_192: 4768461141190707969
@@ -1370,14 +1379,14 @@ TextureImporter:
       KakaoTalk_20250616_113626189_197: 6710937734548374970
       KakaoTalk_20250616_113626189_198: -2484649463826978075
       KakaoTalk_20250616_113626189_199: 3729718406427819163
-      KakaoTalk_20250616_113626189_2: -8469566196852983616
-      KakaoTalk_20250616_113626189_20: -7600873559987594166
+      KakaoTalk_20250616_113626189_2: 1290135660965938120
+      KakaoTalk_20250616_113626189_20: -6152259684808736256
       KakaoTalk_20250616_113626189_200: -2113993467141700210
       KakaoTalk_20250616_113626189_201: 6277861526429428574
       KakaoTalk_20250616_113626189_202: 8647702339067154991
       KakaoTalk_20250616_113626189_203: -4163104276583985190
       KakaoTalk_20250616_113626189_204: -8657062823630649177
-      KakaoTalk_20250616_113626189_21: 585029479478094308
+      KakaoTalk_20250616_113626189_21: 7449954902435409907
       KakaoTalk_20250616_113626189_22: 8771334181544639880
       KakaoTalk_20250616_113626189_23: 5578668541825145811
       KakaoTalk_20250616_113626189_24: 2992076592435150767
@@ -1386,9 +1395,8 @@ TextureImporter:
       KakaoTalk_20250616_113626189_27: 5392382131522886593
       KakaoTalk_20250616_113626189_28: 4205960985728119248
       KakaoTalk_20250616_113626189_29: 1726994492743952093
-      KakaoTalk_20250616_113626189_3: 6757032145146712370
+      KakaoTalk_20250616_113626189_3: -8469566196852983616
       KakaoTalk_20250616_113626189_30: -6543945728064993713
-      KakaoTalk_20250616_113626189_31: -6100542340988578972
       KakaoTalk_20250616_113626189_32: -1165464072155578676
       KakaoTalk_20250616_113626189_33: -3524316156754618412
       KakaoTalk_20250616_113626189_34: 2255297537716356838
@@ -1397,7 +1405,7 @@ TextureImporter:
       KakaoTalk_20250616_113626189_37: 2672816098942975095
       KakaoTalk_20250616_113626189_38: 6369869643473760421
       KakaoTalk_20250616_113626189_39: 8845409184619817277
-      KakaoTalk_20250616_113626189_4: 3372045707025238153
+      KakaoTalk_20250616_113626189_4: -235198336406670599
       KakaoTalk_20250616_113626189_40: 6432980287294074960
       KakaoTalk_20250616_113626189_41: 4802029057241126118
       KakaoTalk_20250616_113626189_42: -5799792874544002025
@@ -1408,18 +1416,16 @@ TextureImporter:
       KakaoTalk_20250616_113626189_47: -4774003161245868199
       KakaoTalk_20250616_113626189_48: 6407157944746464149
       KakaoTalk_20250616_113626189_49: -5097290893860962844
-      KakaoTalk_20250616_113626189_5: 1224419525969674747
-      KakaoTalk_20250616_113626189_50: -235198336406670599
+      KakaoTalk_20250616_113626189_5: 6578580337347230509
       KakaoTalk_20250616_113626189_51: -3902335871741253820
       KakaoTalk_20250616_113626189_52: -8416524969028513334
       KakaoTalk_20250616_113626189_53: 3121170258742608633
-      KakaoTalk_20250616_113626189_54: 6578580337347230509
       KakaoTalk_20250616_113626189_55: -4286402212813775013
       KakaoTalk_20250616_113626189_56: -5659006732648271945
       KakaoTalk_20250616_113626189_57: -8881833378856105984
       KakaoTalk_20250616_113626189_58: -4094688957515020534
       KakaoTalk_20250616_113626189_59: -2936182650445560892
-      KakaoTalk_20250616_113626189_6: 8421814517711928880
+      KakaoTalk_20250616_113626189_6: -1967931284858537603
       KakaoTalk_20250616_113626189_60: 8628736661902491720
       KakaoTalk_20250616_113626189_61: 3761996614378741173
       KakaoTalk_20250616_113626189_62: -5913962687447872446
@@ -1430,7 +1436,7 @@ TextureImporter:
       KakaoTalk_20250616_113626189_67: -6270360228133432601
       KakaoTalk_20250616_113626189_68: -5569072898962221909
       KakaoTalk_20250616_113626189_69: -8138586705819059651
-      KakaoTalk_20250616_113626189_7: 1290135660965938120
+      KakaoTalk_20250616_113626189_7: 7328751056176403756
       KakaoTalk_20250616_113626189_70: -4750353598894453730
       KakaoTalk_20250616_113626189_71: 4704589153010598247
       KakaoTalk_20250616_113626189_72: -8649836802216287169
@@ -1441,7 +1447,7 @@ TextureImporter:
       KakaoTalk_20250616_113626189_77: -3118746384653512095
       KakaoTalk_20250616_113626189_78: 6925767626744067045
       KakaoTalk_20250616_113626189_79: -574473286134704885
-      KakaoTalk_20250616_113626189_8: -1787590156270724970
+      KakaoTalk_20250616_113626189_8: -6432743789465833935
       KakaoTalk_20250616_113626189_80: -5399815753195989211
       KakaoTalk_20250616_113626189_81: -7870534711168744590
       KakaoTalk_20250616_113626189_82: 4326005646217165859
@@ -1452,14 +1458,11 @@ TextureImporter:
       KakaoTalk_20250616_113626189_87: 1978849665381736043
       KakaoTalk_20250616_113626189_88: -2996603105815844271
       KakaoTalk_20250616_113626189_89: 2552049603577618635
-      KakaoTalk_20250616_113626189_9: 5564572450897471731
+      KakaoTalk_20250616_113626189_9: 867790585615281801
       KakaoTalk_20250616_113626189_90: -712117844117738523
       KakaoTalk_20250616_113626189_91: 7591323304920257525
       KakaoTalk_20250616_113626189_92: -3930855937464251684
       KakaoTalk_20250616_113626189_93: -7916190106139853355
-      KakaoTalk_20250616_113626189_94: -1967931284858537603
-      KakaoTalk_20250616_113626189_95: 7328751056176403756
-      KakaoTalk_20250616_113626189_96: -6432743789465833935
       KakaoTalk_20250616_113626189_97: -5682483887061606379
       KakaoTalk_20250616_113626189_98: 5025256545860194874
       KakaoTalk_20250616_113626189_99: -5782054843294433025
