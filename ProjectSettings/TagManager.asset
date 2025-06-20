@@ -6,6 +6,9 @@ TagManager:
   tags:
   - PosRoot
   - MapPos
+  - PlayerStart
+  - Monster
+  - UIMainFrame
   layers:
   - Default
   - TransparentFX

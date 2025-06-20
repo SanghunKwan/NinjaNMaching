@@ -17,6 +17,7 @@ public class IngameManager : MonoBehaviour
     GameObject _prefabCard;
     Transform _cardRoot;
     Transform _mapPosition;
+    Transform _playerStartPos;
 
     //정보 변수
     int _firstIndex = -1;
@@ -28,6 +29,10 @@ public class IngameManager : MonoBehaviour
 
     //Datas
     List<CardObj> _genCardList;
+
+    //UIs
+    Transform _mainFrame;
+
 
     public GameState _nowState => _currentState;
     public bool _isChoiceEnd => _choiceCount == 2;
@@ -233,7 +238,10 @@ public class IngameManager : MonoBehaviour
         _cardRoot = go.transform;
         go = GameObject.FindGameObjectWithTag("MapPos");
         _mapPosition = go.transform;
-
+        go = GameObject.FindGameObjectWithTag("PlayerStart");
+        _playerStartPos = go.transform;
+        go = GameObject.FindGameObjectWithTag("UIMainFrame");
+        _mainFrame = go.transform;
         SettingInfoValues(stage);
 
         GameObject map = Resources.Load("Prefabs/Maps/" + _stageInfo._mapName) as GameObject;
