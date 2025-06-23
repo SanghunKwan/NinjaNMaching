@@ -12,6 +12,7 @@ public class MonsterInfoList : TableBase
         Def,
         Grade,
         PerCount,
+        PrefabName,
 
         Max
     }

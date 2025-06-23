@@ -9,6 +9,7 @@ TagManager:
   - PlayerStart
   - Monster
   - UIMainFrame
+  - ActionRoot
   layers:
   - Default
   - TransparentFX

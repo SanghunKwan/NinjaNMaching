@@ -6,8 +6,13 @@ namespace DefineEnum
     public enum GameState
     {
         INITLOAD,
+        READY,
         CARDDEPLOY,
-        PLAYGAME
+        START,
+        PLAYGAME,
+        INTERMISSION,
+        ENDGAME,
+        RESULTGAME
     }
     public enum InfoTableName
     {
@@ -105,4 +110,13 @@ namespace DefineEnum
         Max
     }
     #endregion[Ä«µå Define]
+
+    #region [UI Define]
+    public enum MessageType
+    {
+        Normal,
+        Timer,
+        Movement
+    }
+    #endregion [UI Define]
 }
