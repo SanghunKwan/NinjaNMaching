@@ -41,6 +41,7 @@ public class GameTableManager : TSingleton<GameTableManager>
         Load<MonsterInfoList>(InfoTableName.MonsterInfoList);
         Load<MonsterSpawnList>(InfoTableName.MonsterSpawnList);
         Load<StageInfoList>(InfoTableName.StageInfoList);
+        Load<LevelInfoList>(InfoTableName.LevelInfoList);
     }
     public TableBase Get(InfoTableName name)
     {

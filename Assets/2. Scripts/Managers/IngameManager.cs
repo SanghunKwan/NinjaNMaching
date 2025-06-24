@@ -12,11 +12,18 @@ public class IngameManager : MonoBehaviour
     const float _cardGenDelayTime = 0.1f;
     Vector2 _offset = new Vector2(1.6f, -2.1f);
 
+    [Header("리소스 관리")]
+
+    [SerializeField] Sprite[] _monsterGradeIcons;
+
 
     //참조 변수
     GameObject _prefabPlayer;
     GameObject _prefabCard;
     GameObject _prefabBigMsgBox;
+    GameObject _prefabMiniMonBox;
+    GameObject _prefabMiniStatBox;
+
     Transform _cardRoot;
     Transform _mapPosition;
     Transform _playerStartPos;
@@ -44,6 +51,8 @@ public class IngameManager : MonoBehaviour
     //UIs
     Transform _mainFrame;
     UIBigMessageBox _uiBMBox;
+    UIMiniInfoMonsterBox _uiMiniInfoMonBox;
+    UIMiniStatInfoBox _uiMiniStatBox;
 
 
     public GameState _nowState => _currentState;
@@ -134,7 +143,7 @@ public class IngameManager : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
-        PlayGame();
+        StartGame();
     }
     int[] GetShuffleCard(int typeCount)
     {
@@ -254,6 +263,8 @@ public class IngameManager : MonoBehaviour
         _prefabPlayer = Resources.Load<GameObject>("Prefabs/Objects/HeroObject");
         _prefabCard = Resources.Load<GameObject>("Prefabs/Objects/CardObject");
         _prefabBigMsgBox = Resources.Load<GameObject>("Prefabs/UIs/BigMessageBox");
+        _prefabMiniMonBox = Resources.Load<GameObject>("Prefabs/UIs/MiniInfoMonsterBox");
+        _prefabMiniStatBox = Resources.Load<GameObject>("Prefabs/UIs/MiniStatInfoBox");
 
         GameObject go = GameObject.FindGameObjectWithTag("PosRoot");
         _cardRoot = go.transform;
@@ -268,10 +279,16 @@ public class IngameManager : MonoBehaviour
         _mainFrame = go.transform;
         go = Instantiate(_prefabBigMsgBox, _mainFrame);
         _uiBMBox = go.GetComponent<UIBigMessageBox>();
+        go = Instantiate(_prefabMiniMonBox, _mainFrame);
+        _uiMiniInfoMonBox = go.GetComponent<UIMiniInfoMonsterBox>();
+        go = Instantiate(_prefabMiniStatBox, _mainFrame);
+        _uiMiniStatBox = go.GetComponent<UIMiniStatInfoBox>();
 
         SettingStageInfoValues(stage);
 
         _uiBMBox.CloseBox();
+        _uiMiniInfoMonBox.CloseBox();
+        _uiMiniStatBox.CloseBox();
 
         GameObject map = Resources.Load("Prefabs/Maps/" + _stageInfo._mapName) as GameObject;
         Instantiate(map, _mapPosition);
@@ -284,7 +301,7 @@ public class IngameManager : MonoBehaviour
 
         GameObject go = Instantiate(_prefabPlayer);
         _player = go.GetComponent<HeroObj>();
-        _player.InitSet(_rootAction.GetChild(0));
+        _player.InitSet(_rootAction.GetChild(0), "홍길동", 1, 0, _uiMiniStatBox);
     }
     public void CardDeploy()
     {
@@ -307,9 +324,9 @@ public class IngameManager : MonoBehaviour
         {
             _uiBMBox.OpenBox("CardSet...");
             StartCoroutine(GenerateCard(_stageInfo._cardCount, _cardGenDelayTime));
-
         }
-        StartGame();
+        else
+            StartGame();
     }
     public void StartGame()
     {
@@ -337,7 +354,7 @@ public class IngameManager : MonoBehaviour
         GameObject prefabMon = Resources.Load<GameObject>("Prefabs/Objects/" + prefabName);
         GameObject go = Instantiate(prefabMon);
         _other = go.GetComponent<MonsterObj>();
-        _other.InitSet(_rootAction.GetChild(1));
+        _other.InitSet(_rootAction.GetChild(1), monIndex, _uiMiniInfoMonBox);
     }
     public void EndGame()
     {
@@ -346,5 +363,11 @@ public class IngameManager : MonoBehaviour
     public void ResultGame()
     {
         _currentState = GameState.RESULTGAME;
+    }
+
+    public Sprite GetIconFromMonsterGrade(MonsterGrade mg)
+    {
+        int id = (int)mg;
+        return _monsterGradeIcons[id];
     }
 }

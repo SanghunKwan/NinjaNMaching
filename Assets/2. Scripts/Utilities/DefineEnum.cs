@@ -19,6 +19,7 @@ namespace DefineEnum
         MonsterInfoList,
         MonsterSpawnList,
         StageInfoList,
+        LevelInfoList,
 
         Max
     }

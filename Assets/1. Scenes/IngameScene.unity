@@ -595,6 +595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2d9c07a15d2584082eb9eb468eb282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _monsterGradeIcons:
+  - {fileID: 21300000, guid: cb7e5b6e7280929478774328f28e0246, type: 3}
+  - {fileID: 21300000, guid: 9d9bec3e09e03574686a8a062b21176d, type: 3}
+  - {fileID: 21300000, guid: 6dc7cf6e203a65049be2525d4b3a5895, type: 3}
+  - {fileID: 21300000, guid: c5d2226ee6c61ce429ae3c8ec933c015, type: 3}
 --- !u!4 &1135314255
 Transform:
   m_ObjectHideFlags: 0

@@ -1,14 +1,41 @@
 using UnityEngine;
 using DefineEnum;
 using System.Collections;
+using UnityEngine.UIElements;
 
-public class HeroObj : MonoBehaviour
+public class HeroObj : CharBase
 {
+    // stat 관련 정보
+    int _level;
+    int _nowXP;
+    int _targetXP;
+    int _prevXP;
+    //==
+
     Animator _aniController;
     SpriteRenderer _model;
+    UIMiniStatInfoBox _uiStatBox;
 
     AniActionState _state;
     float _speed;
+
+
+
+    public override int _finalDamage => _attack;
+
+    public override int _finalDefence => _defence;
+
+    public float _xpRate
+    {
+        get
+        {
+            if (_level >= 10) return 1;
+
+            int requireXp = _targetXP - _prevXP;
+            int xp = _nowXP - _prevXP;
+            return (float)xp / requireXp;
+        }
+    }
 
     IEnumerator EntryDirecting(int number, Vector3 sPos, Vector3 ePos)
     {
@@ -37,6 +64,7 @@ public class HeroObj : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         _model.flipX = !_model.flipX;
 
+        //_uiStatBox.OpenBox(_name, _attack, _defence);
         ExchangeAniToAction(AniActionState.ENTRY1);
         while (myPos.position != sPos)
         {
@@ -52,12 +80,27 @@ public class HeroObj : MonoBehaviour
         IngameManager._instance.Intermission();
     }
 
-    public void InitSet(Transform goalRoot)
+    public void InitSet(Transform goalRoot, string name, int level, int xp, UIMiniStatInfoBox box)
     {
         _aniController = GetComponent<Animator>();
         _model = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        _uiStatBox = box;
+
+        //Level에 따른 히어로의 스탯 설정.
+        TableBase table = GameTableManager._instance.Get(InfoTableName.LevelInfoList);
+        int hp = table.ToInt(level, "HP");
+        int att = table.ToInt(level, "Attack");
+        int def = table.ToInt(level, "Defence");
+        _targetXP = table.ToInt(level, "XP");
+        _nowXP = xp;
+        if (_level > 1)
+            _prevXP = table.ToInt(level - 1, "XP");
+        else _prevXP = 0;
+        //==
 
         PlayEntry(goalRoot);
+        InitBaseSet(name, att, def, hp);
+
     }
 
     public void PlayEntry(Transform goalRoot)
@@ -71,7 +114,7 @@ public class HeroObj : MonoBehaviour
         StartCoroutine(EntryDirecting(Random.Range(0, 2), goalRoot.position, entryPos));
     }
 
-    public void ExchangeAniToAction(AniActionState state)
+    public override void ExchangeAniToAction(AniActionState state)
     {
         switch (state)
         {
@@ -85,12 +128,12 @@ public class HeroObj : MonoBehaviour
             case AniActionState.ENTRY2:
                 _aniController.SetBool("IsEntry2", true);
                 break;
-
             case AniActionState.ATTACK1:
-                _aniController.SetTrigger("Attack1");
-                break;
             case AniActionState.ATTACK2:
-                _aniController.SetTrigger("Attack2");
+                if (Random.Range(0, 2) == 0)
+                    _aniController.SetTrigger("Attack1");
+                else
+                    _aniController.SetTrigger("Attack2");
                 break;
             case AniActionState.SPECIAL1:
                 _aniController.SetTrigger("Skill1");

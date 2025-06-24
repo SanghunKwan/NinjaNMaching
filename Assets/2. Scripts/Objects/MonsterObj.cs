@@ -1,19 +1,38 @@
 using UnityEngine;
 using DefineEnum;
 using System.Collections;
-using System.Net;
 
-public class MonsterObj : MonoBehaviour
+public class MonsterObj : CharBase
 {
+    //stat 관련 정보
+    MonsterGrade _grade;
+    float _stdPerCount;
+
     Animator _aniController;
+    UIMiniInfoMonsterBox _uiInfoBox;
 
     AniActionState _state;
     float _speed;
 
-    public void InitSet(Transform goalRoot)
+    public override int _finalDamage => throw new System.NotImplementedException();
+
+    public override int _finalDefence => throw new System.NotImplementedException();
+
+    public void InitSet(Transform goalRoot, int monIndex, UIMiniInfoMonsterBox box)
     {
         _aniController = GetComponent<Animator>();
+        _uiInfoBox = box;
 
+        //몬스터 정보 설정
+        TableBase table = GameTableManager._instance.Get(InfoTableName.MonsterInfoList);
+        string name = table.ToStr(monIndex, "MonsterName");
+        int att = table.ToInt(monIndex, "Att");
+        int def = table.ToInt(monIndex, "Def");
+        int hp = table.ToInt(monIndex, "HP");
+        _grade = (MonsterGrade)table.ToInt(monIndex, "Grade");
+        _stdPerCount = table.ToFloat(monIndex, "PerCount");
+        //==
+        InitBaseSet(name, att, def, hp);
         PlayEntry(goalRoot);
     }
 
@@ -52,12 +71,15 @@ public class MonsterObj : MonoBehaviour
         }
 
         ExchangeAniToAction(AniActionState.IDLE);
+        _uiInfoBox.OpenBox(_name, _attack, _defence, _stdPerCount, _grade);
+        yield return new WaitForSeconds(0.5f);
 
+        ExchangeAniToAction(AniActionState.HIT);
         yield return new WaitForSeconds(0.5f);
 
         IngameManager._instance.CardDeploy();
     }
-    public void ExchangeAniToAction(AniActionState state)
+    public override void ExchangeAniToAction(AniActionState state)
     {
         switch (state)
         {
