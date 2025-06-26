@@ -1,7 +1,6 @@
 using UnityEngine;
 using DefineEnum;
 using System.Collections;
-using UnityEngine.UIElements;
 
 public class HeroObj : CharBase
 {
@@ -15,6 +14,7 @@ public class HeroObj : CharBase
     Animator _aniController;
     SpriteRenderer _model;
     UIMiniStatInfoBox _uiStatBox;
+    MonsterObj _target;
 
     AniActionState _state;
     float _speed;
@@ -64,7 +64,7 @@ public class HeroObj : CharBase
         yield return new WaitForSeconds(0.3f);
         _model.flipX = !_model.flipX;
 
-        //_uiStatBox.OpenBox(_name, _attack, _defence);
+        _uiStatBox.OpenBox(_name, _attack, _defence, _xpRate);
         ExchangeAniToAction(AniActionState.ENTRY1);
         while (myPos.position != sPos)
         {
@@ -102,6 +102,10 @@ public class HeroObj : CharBase
         InitBaseSet(name, att, def, hp);
 
     }
+    public void SetTargetMonster(MonsterObj obj)
+    {
+        _target = obj;
+    }
 
     public void PlayEntry(Transform goalRoot)
     {
@@ -112,6 +116,30 @@ public class HeroObj : CharBase
         transform.position = spawnPos;
 
         StartCoroutine(EntryDirecting(Random.Range(0, 2), goalRoot.position, entryPos));
+    }
+
+    public void OrderOfAttack()
+    {
+        AniActionState state = (Random.Range(0, 2) == 0) ? AniActionState.ATTACK1 : AniActionState.ATTACK2;
+
+        ExchangeAniToAction(state);
+    }
+    public void HittingMon(int type)            //0 : 일반공격, 1 : 스킬1, 2 : 스킬2
+    {
+        //Debug.Log("확~때려부려!!");
+        int finishDamage = _finalDamage;
+        switch (type)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+        }
+        if (_target.OnHit(_finalDamage))
+        {
+            _target = null;
+            IngameManager._instance.DeadDelayTime();
+        }
     }
 
     public override void ExchangeAniToAction(AniActionState state)
@@ -129,11 +157,10 @@ public class HeroObj : CharBase
                 _aniController.SetBool("IsEntry2", true);
                 break;
             case AniActionState.ATTACK1:
+                _aniController.SetTrigger("Attack1");
+                break;
             case AniActionState.ATTACK2:
-                if (Random.Range(0, 2) == 0)
-                    _aniController.SetTrigger("Attack1");
-                else
-                    _aniController.SetTrigger("Attack2");
+                _aniController.SetTrigger("Attack2");
                 break;
             case AniActionState.SPECIAL1:
                 _aniController.SetTrigger("Skill1");
@@ -152,6 +179,23 @@ public class HeroObj : CharBase
         _state = state;
     }
 
+    public bool OnHit(int finalDamage)
+    {
+        bool result = false;
+        int dam = Mathf.Max(finalDamage - _finalDefence, 1);
+
+        if ((_nowHP -= dam) <= 0)
+        {
+            _nowHP = 0;
+            ExchangeAniToAction(AniActionState.DIE);
+        }
+        else
+            ExchangeAniToAction(AniActionState.HIT);
+
+        _uiStatBox.SetHPRate(_hpRate);
+
+        return result;
+    }
     //public void OnGUI()
     //{
     //    if (GUI.Button(new Rect(Screen.width - 200, 0, 200, 40), "IDLE"))

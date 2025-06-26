@@ -11,6 +11,7 @@ namespace DefineEnum
         START,
         PLAYGAME,
         INTERMISSION,
+        DEADDELAY,
         ENDGAME,
         RESULTGAME
     }

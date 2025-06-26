@@ -20,7 +20,7 @@ public abstract class CharBase : MonoBehaviour
         _name = name;
         _attack = att;
         _defence = def;
-        _hp = hp;
+        _nowHP = _hp = hp;
     }
 
     public abstract int _finalDamage { get; }

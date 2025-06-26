@@ -10,18 +10,20 @@ public class MonsterObj : CharBase
 
     Animator _aniController;
     UIMiniInfoMonsterBox _uiInfoBox;
+    HeroObj _target;
 
     AniActionState _state;
     float _speed;
 
-    public override int _finalDamage => throw new System.NotImplementedException();
+    public override int _finalDamage => _attack;
 
-    public override int _finalDefence => throw new System.NotImplementedException();
+    public override int _finalDefence => _defence;
 
-    public void InitSet(Transform goalRoot, int monIndex, UIMiniInfoMonsterBox box)
+    public void InitSet(Transform goalRoot, int monIndex, UIMiniInfoMonsterBox box, HeroObj obj)
     {
         _aniController = GetComponent<Animator>();
         _uiInfoBox = box;
+        _target = obj;
 
         //몬스터 정보 설정
         TableBase table = GameTableManager._instance.Get(InfoTableName.MonsterInfoList);
@@ -34,6 +36,27 @@ public class MonsterObj : CharBase
         //==
         InitBaseSet(name, att, def, hp);
         PlayEntry(goalRoot);
+    }
+
+    public float CalcAttackStartRate(float faildCount)
+    {
+        if (faildCount >= _stdPerCount)
+        {
+            faildCount -= _stdPerCount;
+            ExchangeAniToAction(AniActionState.ATTACK1);
+        }
+
+        _uiInfoBox.SetPerCountRate(1 - (faildCount / _stdPerCount));
+
+        return faildCount;
+    }
+    public void HittingMon()
+    {
+        //Debug.Log("흐미~발라버려야~!");
+        if (_target.OnHit(_finalDamage))
+        {
+            IngameManager._instance.EndGame(false);
+        }
     }
 
     public void PlayEntry(Transform goalRoot)
@@ -78,6 +101,30 @@ public class MonsterObj : CharBase
         yield return new WaitForSeconds(0.5f);
 
         IngameManager._instance.CardDeploy();
+    }
+    public bool OnHit(int finalDamage)
+    {
+        bool result = false;
+        int dam = Mathf.Max(finalDamage - _finalDefence, 1);
+
+        if ((_nowHP -= dam) <= 0)
+        {
+            _nowHP = 0;
+            ExchangeAniToAction(AniActionState.DIE);
+            result = true;
+        }
+        else
+        {
+            ExchangeAniToAction(AniActionState.HIT);
+        }
+        _uiInfoBox.SetHPRate(_hpRate);
+        return result;
+    }
+    public void OnDead()
+    {
+        Destroy(gameObject, 2);
+        _uiInfoBox.CloseBox();
+        transform.GetChild(1).gameObject.SetActive(false);
     }
     public override void ExchangeAniToAction(AniActionState state)
     {

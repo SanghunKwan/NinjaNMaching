@@ -10,6 +10,7 @@ public class UIMiniInfoMonsterBox : MonoBehaviour
     [SerializeField] Text _txtDef;
     [SerializeField] Text _txtPerCount;
     [SerializeField] Slider _barHP;
+    [SerializeField] Image _perCountSlider;
 
     public void CloseBox()
     {
@@ -25,10 +26,15 @@ public class UIMiniInfoMonsterBox : MonoBehaviour
         _iconGrade.sprite = IngameManager._instance.GetIconFromMonsterGrade(grade);
 
         _barHP.value = 1;
+        _perCountSlider.fillAmount = 1;
     }
 
     public void SetHPRate(float rate)
     {
         _barHP.value = rate;
+    }
+    public void SetPerCountRate(float rate)
+    {
+        _perCountSlider.fillAmount = rate;
     }
 }

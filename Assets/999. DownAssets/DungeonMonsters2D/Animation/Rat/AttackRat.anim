@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AttackRat
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -779,6 +779,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2993102207
       attribute: 1
@@ -786,6 +788,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1033235343
       attribute: 1
@@ -793,6 +797,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1276725220
       attribute: 1
@@ -800,6 +806,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 821359451
       attribute: 1
@@ -807,6 +815,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3450482737
       attribute: 1
@@ -814,6 +824,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2993102207
       attribute: 4
@@ -821,6 +833,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1552288501
       attribute: 4
@@ -828,6 +842,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 957962242
       attribute: 4
@@ -835,6 +851,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1038464939
       attribute: 4
@@ -842,6 +860,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1276725220
       attribute: 4
@@ -849,6 +869,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 429097836
       attribute: 4
@@ -856,6 +878,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3450482737
       attribute: 4
@@ -863,6 +887,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2298648506
       attribute: 4
@@ -870,6 +896,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1033235343
       attribute: 4
@@ -877,6 +905,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 821359451
       attribute: 4
@@ -884,6 +914,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2310824576
       attribute: 4
@@ -891,6 +923,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 703021682
       attribute: 4
@@ -898,6 +932,8 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
@@ -920,7 +956,8 @@ AnimationClip:
     m_HeightFromFeet: 0
     m_Mirror: 0
   m_EditorCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -957,7 +994,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -994,7 +1033,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1031,7 +1072,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1077,7 +1120,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1123,7 +1168,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1169,7 +1216,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1215,7 +1264,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1261,7 +1312,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1307,7 +1360,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1353,7 +1408,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1399,7 +1456,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1445,7 +1504,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1491,7 +1552,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1537,7 +1600,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1583,7 +1648,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1629,7 +1696,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead/BoneScull
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1675,7 +1744,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead/BoneScull
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1721,7 +1792,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead/BoneScull
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1776,7 +1849,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1831,7 +1906,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1886,7 +1963,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1932,7 +2011,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1/BoneRightHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1978,7 +2059,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1/BoneRightHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2024,7 +2107,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1/BoneRightHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2079,7 +2164,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2134,7 +2221,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2189,7 +2278,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2235,7 +2326,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1/BoneLeftHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2281,7 +2374,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1/BoneLeftHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2327,7 +2422,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1/BoneLeftHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2373,7 +2470,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2419,7 +2518,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2465,7 +2566,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2511,7 +2614,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2557,7 +2662,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2603,7 +2710,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2649,7 +2758,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2695,7 +2806,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2741,7 +2854,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2778,7 +2893,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2/BoneTail3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2815,7 +2932,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2/BoneTail3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2852,7 +2971,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2/BoneTail3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2889,7 +3010,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2926,7 +3049,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -2963,7 +3088,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3009,7 +3136,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3055,7 +3184,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3101,7 +3232,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3138,7 +3271,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3175,7 +3310,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3212,7 +3349,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3249,7 +3388,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3286,7 +3427,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -3323,8 +3466,10 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1
     classID: 4
     script: {fileID: 0}
+    flags: 16
   m_EulerEditorCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3334,7 +3479,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3344,7 +3491,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3354,7 +3503,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3364,7 +3515,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3374,7 +3527,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3384,7 +3539,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3394,7 +3551,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3404,7 +3563,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3414,7 +3575,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3424,7 +3587,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3434,7 +3599,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3444,7 +3611,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3454,7 +3623,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3464,7 +3635,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3474,7 +3647,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3484,7 +3659,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1/BoneLeftHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3494,7 +3671,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1/BoneLeftHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3504,7 +3683,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1/BoneLeftHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3514,7 +3695,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead/BoneScull
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3524,7 +3707,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead/BoneScull
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3534,7 +3719,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneHead/BoneScull
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3544,7 +3731,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3554,7 +3743,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3564,7 +3755,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3574,7 +3767,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1/BoneRightHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3584,7 +3779,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1/BoneRightHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3594,7 +3791,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneRightHand1/BoneRightHand2
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3604,7 +3803,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3614,7 +3815,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3624,7 +3827,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftHand1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3634,7 +3839,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3644,7 +3851,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3654,7 +3863,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneNeck/BoneLeftLeg1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3664,7 +3875,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2/BoneTail3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3674,7 +3887,9 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2/BoneTail3
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -3684,6 +3899,14 @@ AnimationClip:
     path: RatMonsterPSB/BoneBody/BoneTail1/BoneTail2/BoneTail3
     classID: 4
     script: {fileID: 0}
+    flags: 16
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.46666667
+    functionName: HittingMon
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

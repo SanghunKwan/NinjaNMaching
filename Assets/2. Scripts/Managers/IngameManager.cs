@@ -22,7 +22,10 @@ public class IngameManager : MonoBehaviour
     GameObject _prefabCard;
     GameObject _prefabBigMsgBox;
     GameObject _prefabMiniMonBox;
-    GameObject _prefabMiniStatBox;
+    GameObject _prefabMiniInfoBox;
+    GameObject _prefabTimerBox;
+    GameObject _prefabMatchBox;
+    GameObject _prefabResultWnd;
 
     Transform _cardRoot;
     Transform _mapPosition;
@@ -40,10 +43,20 @@ public class IngameManager : MonoBehaviour
     int _maxMonsterCount;
     int _nowMonsterNumber;
 
+    int _totalMissmatchCount;
+    int _totalMatchCount;
+
     GameState _currentState;
     StageInfo _stageInfo;
 
     float _checkTime;
+    float _missMatchCount;
+
+    float _playTime;
+    float _extraStrokeTime;
+
+    bool _isDestoryCard;
+    bool _gameSuccess;
 
     //Datas
     List<CardObj> _genCardList;
@@ -52,7 +65,9 @@ public class IngameManager : MonoBehaviour
     Transform _mainFrame;
     UIBigMessageBox _uiBMBox;
     UIMiniInfoMonsterBox _uiMiniInfoMonBox;
-    UIMiniStatInfoBox _uiMiniStatBox;
+    UIMiniStatInfoBox _uiMiniInfoBox;
+    UITimerBox _uiTimerBox;
+    UIMatchInfoBox _uiMatchBox;
 
 
     public GameState _nowState => _currentState;
@@ -85,25 +100,62 @@ public class IngameManager : MonoBehaviour
                     PlayGame();
                 break;
             case GameState.PLAYGAME:
+                _extraStrokeTime -= Time.deltaTime;
+                if (_extraStrokeTime <= 0)
+                {
+                    //한 대 맞아라~
+                    _extraStrokeTime += _stageInfo._penaltyTime;
+                }
+                _uiTimerBox.SetNowTime(_extraStrokeTime);
+                if (_isDestoryCard)
+                {
+                    bool isAll = true;
+                    foreach (var item in _genCardList)
+                    {
+                        if (item != null)
+                        {
+                            isAll = false;
+                            break;
+                        }
+                    }
+
+                    if (isAll)
+                    {
+                        _genCardList.Clear();
+                        CardDeploy();
+                    }
+                    _isDestoryCard = false;
+                }
                 if (_choiceCount == 2)
                 {
                     if (_genCardList[_firstIndex]._isOpened && _genCardList[_secondIndex]._isOpened)
                     {
                         if (MatchedCard(_firstIndex, _secondIndex))
                         {
-                            //삭제
-                            Debug.LogFormat("{0}번 카드와 {1}번 카드가 삭제되었습니다.", _firstIndex, _secondIndex);
+                            //플레이어에게 몬스터를 공격하도록 지시.
+                            _player.OrderOfAttack();
 
+                            //삭제
+                            //Debug.LogFormat("{0}번 카드와 {1}번 카드가 삭제되었습니다.", _firstIndex, _secondIndex);
                             Destroy(_genCardList[_firstIndex].gameObject);
                             Destroy(_genCardList[_secondIndex].gameObject);
 
+                            _totalMatchCount++;
                             _choiceCount = 0;
                             _firstIndex = _secondIndex = -1;
+                            _isDestoryCard = true;
+                            _uiMatchBox.SetMatchCount(_totalMatchCount);
                         }
                         else
                         {
+                            _totalMissmatchCount++;
+                            _missMatchCount += 1;
+                            //몬스터에게 실패 횟수를 알려줌.
+                            _missMatchCount = _other.CalcAttackStartRate(_missMatchCount);
+
                             _genCardList[_firstIndex].CloseCard();
                             _genCardList[_secondIndex].CloseCard();
+                            _uiMatchBox.SetMissMatchCount(_totalMissmatchCount);
                         }
                     }
                     else if (_genCardList[_firstIndex]._isClosed && _genCardList[_secondIndex]._isClosed)
@@ -111,6 +163,20 @@ public class IngameManager : MonoBehaviour
                         _choiceCount = 0;
                         _firstIndex = _secondIndex = -1;
                     }
+                }
+                break;
+            case GameState.DEADDELAY:
+                _checkTime += Time.deltaTime;
+                if (_checkTime >= 3)
+                {
+                    Intermission();
+                }
+                break;
+
+            case GameState.ENDGAME:
+                if (_checkTime >= 1.5f)
+                {
+                    ResultGame();
                 }
                 break;
         }
@@ -264,7 +330,9 @@ public class IngameManager : MonoBehaviour
         _prefabCard = Resources.Load<GameObject>("Prefabs/Objects/CardObject");
         _prefabBigMsgBox = Resources.Load<GameObject>("Prefabs/UIs/BigMessageBox");
         _prefabMiniMonBox = Resources.Load<GameObject>("Prefabs/UIs/MiniInfoMonsterBox");
-        _prefabMiniStatBox = Resources.Load<GameObject>("Prefabs/UIs/MiniStatInfoBox");
+        _prefabMiniInfoBox = Resources.Load<GameObject>("Prefabs/UIs/MiniStatInfoBox");
+        _prefabTimerBox = Resources.Load<GameObject>("Prefabs/UIs/TimerBox");
+        _prefabMatchBox = Resources.Load<GameObject>("Prefabs/UIs/MatchInfoBox");
 
         GameObject go = GameObject.FindGameObjectWithTag("PosRoot");
         _cardRoot = go.transform;
@@ -281,14 +349,20 @@ public class IngameManager : MonoBehaviour
         _uiBMBox = go.GetComponent<UIBigMessageBox>();
         go = Instantiate(_prefabMiniMonBox, _mainFrame);
         _uiMiniInfoMonBox = go.GetComponent<UIMiniInfoMonsterBox>();
-        go = Instantiate(_prefabMiniStatBox, _mainFrame);
-        _uiMiniStatBox = go.GetComponent<UIMiniStatInfoBox>();
+        go = Instantiate(_prefabMiniInfoBox, _mainFrame);
+        _uiMiniInfoBox = go.GetComponent<UIMiniStatInfoBox>();
+        go = Instantiate(_prefabTimerBox, _mainFrame);
+        _uiTimerBox = go.GetComponent<UITimerBox>();
+        go = Instantiate(_prefabMatchBox, _mainFrame);
+        _uiMatchBox = go.GetComponent<UIMatchInfoBox>();
 
         SettingStageInfoValues(stage);
 
         _uiBMBox.CloseBox();
         _uiMiniInfoMonBox.CloseBox();
-        _uiMiniStatBox.CloseBox();
+        _uiMiniInfoBox.CloseBox();
+        _uiTimerBox.CloseBox();
+        _uiMatchBox.CloseBox();
 
         GameObject map = Resources.Load("Prefabs/Maps/" + _stageInfo._mapName) as GameObject;
         Instantiate(map, _mapPosition);
@@ -301,7 +375,14 @@ public class IngameManager : MonoBehaviour
 
         GameObject go = Instantiate(_prefabPlayer);
         _player = go.GetComponent<HeroObj>();
-        _player.InitSet(_rootAction.GetChild(0), "홍길동", 1, 0, _uiMiniStatBox);
+        _missMatchCount = _totalMissmatchCount = 0;
+
+        //임시
+        _player.InitSet(_rootAction.GetChild(0), "홍길동", 1, 0, _uiMiniInfoBox);
+        //==
+
+        _uiTimerBox.OpenBox();
+        _uiMatchBox.OpenBox();
     }
     public void CardDeploy()
     {
@@ -341,6 +422,7 @@ public class IngameManager : MonoBehaviour
 
         _uiBMBox.CloseBox();
         _checkTime = 0;
+        _playTime = Time.time;
     }
     public void Intermission()
     {
@@ -354,15 +436,60 @@ public class IngameManager : MonoBehaviour
         GameObject prefabMon = Resources.Load<GameObject>("Prefabs/Objects/" + prefabName);
         GameObject go = Instantiate(prefabMon);
         _other = go.GetComponent<MonsterObj>();
-        _other.InitSet(_rootAction.GetChild(1), monIndex, _uiMiniInfoMonBox);
+        _other.InitSet(_rootAction.GetChild(1), monIndex, _uiMiniInfoMonBox, _player);
+        _player.SetTargetMonster(_other);
+
+        _extraStrokeTime = _stageInfo._penaltyTime;
+        _uiTimerBox.SetNowTime(_extraStrokeTime);
     }
-    public void EndGame()
+    public void DeadDelayTime()
+    {
+        _currentState = GameState.DEADDELAY;
+
+        _checkTime = 0;
+        if (_stageInfo._monIndexList.Count > 0)
+        {
+            _uiBMBox.OpenBox("Gooooooood~!!", MessageType.Timer, 2);
+        }
+        else
+        {
+            EndGame(true);
+        }
+    }
+    public void EndGame(bool isSuccess)
     {
         _currentState = GameState.ENDGAME;
+
+        if (_gameSuccess = isSuccess)
+            _uiBMBox.OpenBox("축하합니다~!!");
+        else
+            _uiBMBox.OpenBox("게임 오버...");
+
+        _checkTime = 0;
+        _playTime = Time.time - _playTime;
     }
     public void ResultGame()
     {
         _currentState = GameState.RESULTGAME;
+
+        _uiBMBox.CloseBox();
+        GameObject go = Instantiate(_prefabResultWnd);
+        UIResultWnd wnd = go.GetComponent<UIResultWnd>();
+
+        int rank = 0;
+        if (_gameSuccess)
+        {
+            //Rank 체크
+            float std = _player._hpRate * 100;
+            if (std >= _stageInfo._clearCon._condition2)
+                rank = 3;
+            else if (std >= _stageInfo._clearCon._condition1)
+                rank = 2;
+            else
+                rank = 1;
+        }
+
+        wnd.OpenWnd(_gameSuccess, rank, _totalMatchCount, _totalMissmatchCount, _playTime, _stageInfo._rewardXP);
     }
 
     public Sprite GetIconFromMonsterGrade(MonsterGrade mg)
