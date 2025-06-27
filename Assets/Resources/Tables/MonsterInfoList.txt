@@ -1,10 +1,10 @@
-1|거미라도|10|2|0|0|5.9|SpiderObject
-2|나뭇잎마을주민|25|5|2|0|6.6|LeafyResidentObject
-3|유령 사무라이|30|15|0|1|3.5|GhostSamuraiObject
-4|고블린 전사|25|7|1|1|3.5|GoblinWarriorObject
-5|세르게이|150|9|2|2|3.6|SergeyObject
-6|진흙골렘|50|5|5|1|4|MudGolemObject
-7|늑대|20|5|1|0|2.4|WolfObject
-8|찰흙골렘|80|4|0|0|8.8|ClayGolemObject
-1001|홍김동|200|15|3|3|1.5|HongKimObject
-1002|단단묵직|40|20|10|3|7|HardHeavyObject
+1|거미라도|10|2|0|0|5.9|Spider|SpiderObject
+2|나뭇잎마을주민|25|5|2|0|6.6|LeafyResident|LeafyResidentObject
+3|유령 사무라이|30|15|0|1|3.5|GhostSamurai|GhostSamuraiObject
+4|고블린 전사|25|7|1|1|3.5|GoblinWarrior|GoblinWarriorObject
+5|세르게이|150|9|2|2|3.6|Sergey|SergeyObject
+6|진흙골렘|50|5|5|1|4|MudGolem|MudGolemObject
+7|늑대|20|5|1|0|2.4|Wolf|WolfObject
+8|찰흙골렘|80|4|0|0|8.8|ClayGolem|ClayGolemObject
+1001|홍김동|200|15|3|3|1.5|HongKim|HongKimObject
+1002|단단묵직|40|20|10|3|7|HardHeavy|HardHeavyObject

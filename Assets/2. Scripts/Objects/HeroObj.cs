@@ -196,6 +196,27 @@ public class HeroObj : CharBase
 
         return result;
     }
+
+    public void OnAcquisitionOfXP(int addXP)
+    {
+        _nowXP += addXP;
+        if (_nowXP >= _targetXP)
+        {
+            //레벨업 효과
+            TableBase table = GameTableManager._instance.Get(InfoTableName.LevelInfoList);
+            _level++;
+            _targetXP = table.ToInt(_level, "XP");
+            _attack = table.ToInt(_level, "Att");
+            _defence = table.ToInt(_level, "Def");
+            _nowHP = _hp = table.ToInt(_level, "HP");
+
+            _uiStatBox.OpenBox(_name, _finalDamage, _finalDefence, _xpRate);
+        }
+        else
+            _uiStatBox.SetXPRate(_xpRate);
+    }
+
+
     //public void OnGUI()
     //{
     //    if (GUI.Button(new Rect(Screen.width - 200, 0, 200, 40), "IDLE"))

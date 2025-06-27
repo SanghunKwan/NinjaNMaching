@@ -1,5 +1,7 @@
+using DefineStructure;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,14 +23,17 @@ public class UIResultWnd : MonoBehaviour
     [SerializeField] Text _textMilSeconds;
     [SerializeField] Text _textAcquisitionXP;
 
+    [SerializeField] ScrollRect _killCountViewer;
     [SerializeField] GameObject _nextButton;
 
+    GameObject _prefabBar;
+    RectTransform _content;
 
     public void CloseWnd()
     {
         gameObject.SetActive(false);
     }
-    public void OpenWnd(bool isSuccess, int rank, int mCount, int mmCount, float gameTime, int xp)
+    public void OpenWnd(bool isSuccess, int rank, int mCount, int mmCount, float gameTime, int xp, IReadOnlyDictionary<int, DefeatMonsterInfo> killList)
     {
         gameObject.SetActive(true);
 
@@ -53,6 +58,16 @@ public class UIResultWnd : MonoBehaviour
         _textMinute.text = (integerTime / 60).ToString();
         _textSeconds.text = (integerTime % 60).ToString();
         _textMinute.text = Mathf.FloorToInt((gameTime - integerTime) * 100).ToString();
+
+        _prefabBar = Resources.Load<GameObject>("Prefabs/UIs/KillCountBar");
+        _content = _killCountViewer.content;
+        foreach (var item in killList.Values)
+        {
+
+            GameObject go = Instantiate(_prefabBar, _content);
+            UIKillCountBar bar = go.GetComponent<UIKillCountBar>();
+            bar.OpenBar(item._rank, item._icon, item._name, item._count);
+        }
     }
 
 

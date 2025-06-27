@@ -12,6 +12,7 @@ public class ResourcePoolManager : TSingleton<ResourcePoolManager>
 
         LoadCardBG();
         LoadCardIcon();
+        LoadMonIcon();
     }
 
     void LoadCardBG()
@@ -42,6 +43,16 @@ public class ResourcePoolManager : TSingleton<ResourcePoolManager>
             iconImages.Add(i.ToString(), iconImage);
         }
         _allPooldatas.Add(PoolDataType.CARDIMAGEICON, iconImages);
+    }
+    void LoadMonIcon()
+    {
+        Dictionary<string, object> monIcons = new Dictionary<string, object>();
+        Sprite[] imgs = Resources.LoadAll<Sprite>("Images/MonsterIcons");
+
+        for (int i = 0; i < imgs.Length; i++)
+            monIcons.Add(imgs[i].name, imgs[i]);
+
+        _allPooldatas.Add(PoolDataType.MONSTERICON, monIcons);
     }
 
     public T Get<T>(PoolDataType type, string index)

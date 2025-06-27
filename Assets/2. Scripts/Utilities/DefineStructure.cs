@@ -3,6 +3,23 @@ using UnityEngine;
 
 namespace DefineStructure
 {
+    public class DefeatMonsterInfo
+    {
+        public int _id { get; set; }
+        public string _name { get; set; }
+        public Sprite _rank { get; set; }
+        public Sprite _icon { get; set; }
+        public int _count { get; set; }
+
+        public DefeatMonsterInfo(int idx, string n, Sprite r, Sprite i)
+        {
+            _id = idx;
+            _name = n;
+            _rank = r;
+            _icon = i;
+            _count = 0;
+        }
+    }
     public struct StageClearInfo
     {
         public float _condition1;

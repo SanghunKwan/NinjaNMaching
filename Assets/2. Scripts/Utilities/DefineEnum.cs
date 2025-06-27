@@ -28,6 +28,7 @@ namespace DefineEnum
     {
         CARDIMAGEBG,
         CARDIMAGEICON,
+        MONSTERICON,
     }
     #endregion[Manager Define]
 

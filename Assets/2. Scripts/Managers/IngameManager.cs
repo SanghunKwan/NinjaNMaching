@@ -60,6 +60,7 @@ public class IngameManager : MonoBehaviour
 
     //Datas
     List<CardObj> _genCardList;
+    Dictionary<int, DefeatMonsterInfo> _killMonsterList;
 
     //UIs
     Transform _mainFrame;
@@ -174,6 +175,7 @@ public class IngameManager : MonoBehaviour
                 break;
 
             case GameState.ENDGAME:
+                _checkTime += Time.deltaTime;
                 if (_checkTime >= 1.5f)
                 {
                     ResultGame();
@@ -297,6 +299,15 @@ public class IngameManager : MonoBehaviour
         }
     }
     //카드 관련 모음(end)
+    public void KillCounting(int monID)
+    {
+        if (!_killMonsterList.ContainsKey(monID))
+        {
+            Debug.Log("있을 수 없는 일입니다!!!!");
+            return;
+        }
+        _killMonsterList[monID]._count += 1;
+    }
 
     void SettingStageInfoValues(int stage)
     {
@@ -326,6 +337,7 @@ public class IngameManager : MonoBehaviour
     {
         _currentState = GameState.INITLOAD;
 
+        _killMonsterList = new Dictionary<int, DefeatMonsterInfo>();
         _prefabPlayer = Resources.Load<GameObject>("Prefabs/Objects/HeroObject");
         _prefabCard = Resources.Load<GameObject>("Prefabs/Objects/CardObject");
         _prefabBigMsgBox = Resources.Load<GameObject>("Prefabs/UIs/BigMessageBox");
@@ -333,6 +345,7 @@ public class IngameManager : MonoBehaviour
         _prefabMiniInfoBox = Resources.Load<GameObject>("Prefabs/UIs/MiniStatInfoBox");
         _prefabTimerBox = Resources.Load<GameObject>("Prefabs/UIs/TimerBox");
         _prefabMatchBox = Resources.Load<GameObject>("Prefabs/UIs/MatchInfoBox");
+        _prefabResultWnd = Resources.Load<GameObject>("Prefabs/UIs/ResultWindow");
 
         GameObject go = GameObject.FindGameObjectWithTag("PosRoot");
         _cardRoot = go.transform;
@@ -383,6 +396,7 @@ public class IngameManager : MonoBehaviour
 
         _uiTimerBox.OpenBox();
         _uiMatchBox.OpenBox();
+        _playTime = Time.time;
     }
     public void CardDeploy()
     {
@@ -422,7 +436,7 @@ public class IngameManager : MonoBehaviour
 
         _uiBMBox.CloseBox();
         _checkTime = 0;
-        _playTime = Time.time;
+
     }
     public void Intermission()
     {
@@ -433,11 +447,20 @@ public class IngameManager : MonoBehaviour
         int monIndex = _stageInfo._monIndexList.Dequeue();
         TableBase tb = GameTableManager._instance.Get(InfoTableName.MonsterInfoList);
         string prefabName = tb.ToStr(monIndex, "PrefabName");
+        string iconName = tb.ToStr(monIndex, MonsterInfoList.Index.IconName.ToString());
         GameObject prefabMon = Resources.Load<GameObject>("Prefabs/Objects/" + prefabName);
         GameObject go = Instantiate(prefabMon);
         _other = go.GetComponent<MonsterObj>();
         _other.InitSet(_rootAction.GetChild(1), monIndex, _uiMiniInfoMonBox, _player);
         _player.SetTargetMonster(_other);
+
+        if (!_killMonsterList.ContainsKey(monIndex))
+        {
+            Sprite rank = GetIconFromMonsterGrade((MonsterGrade)tb.ToInt(monIndex, MonsterInfoList.Index.Grade.ToString()));
+            Sprite icon = ResourcePoolManager._instance.Get<Sprite>(PoolDataType.MONSTERICON, iconName);
+            DefeatMonsterInfo info = new DefeatMonsterInfo(monIndex, _other._myName, rank, icon);
+            _killMonsterList.Add(monIndex, info);
+        }
 
         _extraStrokeTime = _stageInfo._penaltyTime;
         _uiTimerBox.SetNowTime(_extraStrokeTime);
@@ -489,7 +512,7 @@ public class IngameManager : MonoBehaviour
                 rank = 1;
         }
 
-        wnd.OpenWnd(_gameSuccess, rank, _totalMatchCount, _totalMissmatchCount, _playTime, _stageInfo._rewardXP);
+        wnd.OpenWnd(_gameSuccess, rank, _totalMatchCount, _totalMissmatchCount, _playTime, _stageInfo._rewardXP, _killMonsterList);
     }
 
     public Sprite GetIconFromMonsterGrade(MonsterGrade mg)

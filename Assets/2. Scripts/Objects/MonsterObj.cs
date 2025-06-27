@@ -5,6 +5,7 @@ using System.Collections;
 public class MonsterObj : CharBase
 {
     //stat 관련 정보
+    int _monID;
     MonsterGrade _grade;
     float _stdPerCount;
 
@@ -15,6 +16,10 @@ public class MonsterObj : CharBase
     AniActionState _state;
     float _speed;
 
+
+    public string _myName => _name;
+    public int _monsterIndex => _monID;
+
     public override int _finalDamage => _attack;
 
     public override int _finalDefence => _defence;
@@ -24,6 +29,7 @@ public class MonsterObj : CharBase
         _aniController = GetComponent<Animator>();
         _uiInfoBox = box;
         _target = obj;
+        _monID = monIndex;
 
         //몬스터 정보 설정
         TableBase table = GameTableManager._instance.Get(InfoTableName.MonsterInfoList);
@@ -122,6 +128,7 @@ public class MonsterObj : CharBase
     }
     public void OnDead()
     {
+        IngameManager._instance.KillCounting(_monID);
         Destroy(gameObject, 2);
         _uiInfoBox.CloseBox();
         transform.GetChild(1).gameObject.SetActive(false);
