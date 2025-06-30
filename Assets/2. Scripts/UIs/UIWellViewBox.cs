@@ -19,6 +19,9 @@ public class UIWellViewBox : MonoBehaviour
     int _epCount;
     int _nowChapter;
 
+    Vector2 _epBGAnchorPosition;
+
+    float _epBGSpeed;
 
     //임시
 
@@ -53,23 +56,35 @@ public class UIWellViewBox : MonoBehaviour
     public void InitBox(int epNum, int maxEp)
     {
         _isUp = true;
+        _epBGAnchorPosition = _epBG.anchoredPosition;
         _epCount = maxEp;
 
         SetTitleBox(epNum);
     }
 
+    private void Update()
+    {
+        if (_epBG.anchoredPosition == _epBGAnchorPosition) return;
+
+        _epBG.anchoredPosition = Vector2.MoveTowards(_epBG.anchoredPosition, _epBGAnchorPosition, _epBGSpeed);
+        _epBGSpeed += 0.05f;
+
+    }
+
     public void ClickUpNDownButton()
     {
+        _epBGSpeed = -0.7f;
+
         if (_isUp = !_isUp)
         {
             //_epBG를 밑으로 내린다.
-            _epBG.anchoredPosition += Vector2.up * 90;
+            _epBGAnchorPosition += Vector2.up * 90;
             _dragUnDBtn.sprite = _btnImg[0];
         }
         else
         {
             //_epBG를 위로 올린다.
-            _epBG.anchoredPosition += Vector2.down * 90;
+            _epBGAnchorPosition += Vector2.down * 90;
             _dragUnDBtn.sprite = _btnImg[1];
         }
     }
