@@ -1,0 +1,2 @@
+1|비밀의 여정|VillMap|StagePoints1
+2|반전되는 세상|ReverseVillMap|StagePoints2

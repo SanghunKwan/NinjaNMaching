@@ -21,6 +21,7 @@ namespace DefineEnum
         MonsterSpawnList,
         StageInfoList,
         LevelInfoList,
+        ChapterInfoList,
 
         Max
     }
@@ -120,6 +121,18 @@ namespace DefineEnum
         Normal,
         Timer,
         Movement
+    }
+
+    public enum BtnState
+    {
+        Normal,
+        Select
+    }
+    public enum StageState
+    {
+        NotClear,
+        NoReward,
+        GetReward
     }
     #endregion [UI Define]
 }

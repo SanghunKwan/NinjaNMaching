@@ -11,6 +11,8 @@ TagManager:
   - UIMainFrame
   - ActionRoot
   - FxTemporaire
+  - EpMap
+  - WellView
   layers:
   - Default
   - TransparentFX
