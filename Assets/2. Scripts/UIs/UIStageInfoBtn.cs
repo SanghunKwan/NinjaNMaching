@@ -9,6 +9,8 @@ public class UIStageInfoBtn : MonoBehaviour
     [SerializeField] Image[] _rewardStars;
     [SerializeField] Image _lockIcon;
 
+    UIWellViewBox _owerBox;
+
     BtnState _nowState;
 
     /// <summary>
@@ -17,13 +19,14 @@ public class UIStageInfoBtn : MonoBehaviour
     /// <param name="number">스테이지의 번호</param>
     /// <param name="clearStage">리워드를 받은 스테이지의 최종 번호</param>
     /// <param name="rewardRank">해당 스테이지의 리워드 등급 1, 2, 3이다.</param>
-    public void InitBtn(int number, int clearStage, int rewardRank)
+    public void InitBtn(int number, int clearStage, int rewardRank, UIWellViewBox owner)
     {
+        _owerBox = owner;
         _textStageNum.text = number.ToString();
         _nowState = BtnState.Normal;
         _btnIcon.sprite = WellOfGodManager._instance.GetStageIcon(_nowState);
 
-        if (number + 1 > clearStage)
+        if (number - 1 > clearStage)
         {
             _lockIcon.enabled = true;
 
@@ -46,14 +49,18 @@ public class UIStageInfoBtn : MonoBehaviour
     public void SetBtnToNormal()
     {
         _btnIcon.sprite = WellOfGodManager._instance.GetStageIcon(BtnState.Normal);
+        _nowState = BtnState.Normal;
+        _btnIcon.raycastTarget = true;
     }
     public void ClickStageButton()
     {
         if (_nowState == BtnState.Select) return;
 
         //전체 버튼에 대한 Normal 화를 해야함.
+        _owerBox.AllCancel();
+
         _nowState = BtnState.Select;
         _btnIcon.sprite = WellOfGodManager._instance.GetStageIcon(_nowState);
-
+        _btnIcon.raycastTarget = false;
     }
 }

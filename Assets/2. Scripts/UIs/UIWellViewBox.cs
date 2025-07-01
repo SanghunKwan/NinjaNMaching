@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DefineEnum;
+using System.Collections.Generic;
 
 public class UIWellViewBox : MonoBehaviour
 {
@@ -18,23 +19,105 @@ public class UIWellViewBox : MonoBehaviour
 
     int _epCount;
     int _nowChapter;
+    //임시
+    int _openChapter = 1;
+    int _clearStage = 2;
+    //==
+
 
     Vector2 _epBGAnchorPosition;
 
     float _epBGSpeed;
 
-    //임시
+    //prefab
+    GameObject _prefabStageBtn;
+    GameObject _prefabStagePoint;
 
-    private void Start()
-    {
-        InitBox(1, 2);
-    }
-    //==
+    Transform _pointRoot;
 
-    void SetTitleBox(int epNum)
+    //참조
+    Image _imageMap;
+    List<UIStageInfoBtn> _stageList;
+    Dictionary<int, Dictionary<int, UIStageInfoBtn>> _stageAllList;
+    List<GameObject> _rootList;
+    Dictionary<int, UIStageInfoBtn> _refStageList;
+
+
+    void SetChapterInfo(int epNum, TableBase table)
     {
         _nowChapter = epNum;
-        _titleName.text = GameTableManager._instance.Get(InfoTableName.ChapterInfoList).ToStr(epNum, "TitleName");
+
+        string name = table.ToStr(epNum, ChapterInfoList.Index.MapName.ToString());
+        Sprite map = Resources.Load<Sprite>("Images/Maps/" + name);
+        _imageMap.sprite = map;
+
+        if (_stageAllList.ContainsKey(epNum))
+        {
+            for (int i = 0; i < _rootList.Count; i++)
+            {
+                if (i + 1 != epNum)
+                    _rootList[i].SetActive(false);
+                else
+                {
+                    _rootList[i].SetActive(true);
+                }
+            }
+            _refStageList = _stageAllList[epNum];
+        }
+        else
+        {
+            Dictionary<int, UIStageInfoBtn> chapterList = new Dictionary<int, UIStageInfoBtn>();
+
+
+
+            name = table.ToStr(epNum, ChapterInfoList.Index.RootName.ToString());
+            _prefabStagePoint = Resources.Load<GameObject>("Prefabs/Maps/" + name);
+
+            GameObject root = new GameObject("root" + epNum);
+            Transform rootTransform = root.transform;
+            rootTransform.SetParent(_pointRoot, false);
+
+
+            GameObject go = Instantiate(_prefabStagePoint, _pointRoot);
+            Transform point = go.transform;
+
+            GameObject tempItem;
+            UIStageInfoBtn tempStageBtn;
+            for (int i = 0; i < point.childCount; i++)
+            {
+                tempItem = Instantiate(_prefabStageBtn, point.GetChild(i).position, Quaternion.identity, rootTransform);
+
+                tempStageBtn = tempItem.GetComponent<UIStageInfoBtn>();
+                //수정 사항
+                int star = 0;
+                int clear = _clearStage;
+                if (epNum > _openChapter)
+                {
+                    clear = -1;
+                }
+
+                if (i < clear) // i + 1 < _clearStage + 1
+                {
+                    star = Random.Range(1, 4); //1 ~ 3
+                }
+                tempStageBtn.InitBtn(i + 1, clear, star, this);
+                //==
+
+                chapterList.Add(i + 1, tempStageBtn);
+            }
+            _stageAllList.Add(epNum, chapterList);
+            _rootList.Add(root);
+
+            for (int i = 0; i < _rootList.Count; i++)
+            {
+                if (i + 1 != epNum)
+                    _rootList[i].SetActive(false);
+            }
+            _refStageList = _stageAllList[epNum];
+        }
+
+        _titleName.text = table.ToStr(epNum, "TitleName");
+
         if (_nowChapter < 2)
         {
             _prevButton.interactable = false;
@@ -50,16 +133,29 @@ public class UIWellViewBox : MonoBehaviour
             _prevButton.interactable = true;
             _nextButton.interactable = true;
         }
+
     }
 
 
-    public void InitBox(int epNum, int maxEp)
+    public void InitBox(int epNum)
     {
         _isUp = true;
         _epBGAnchorPosition = _epBG.anchoredPosition;
-        _epCount = maxEp;
 
-        SetTitleBox(epNum);
+        _prefabStageBtn = Resources.Load<GameObject>("Prefabs/UIs/StageInfoMiniButton");
+
+        _stageList = new List<UIStageInfoBtn>();
+        _stageAllList = new();
+        _rootList = new();
+
+        ScrollRect sRect = transform.GetChild(0).GetComponent<ScrollRect>();
+        _imageMap = sRect.content.GetChild(0).GetComponent<Image>();
+
+        TableBase table = GameTableManager._instance.Get(InfoTableName.ChapterInfoList);
+        _epCount = table._recordCount;
+        _pointRoot = _imageMap.transform.GetChild(0);
+
+        SetChapterInfo(epNum, table);
     }
 
     private void Update()
@@ -69,6 +165,14 @@ public class UIWellViewBox : MonoBehaviour
         _epBG.anchoredPosition = Vector2.MoveTowards(_epBG.anchoredPosition, _epBGAnchorPosition, _epBGSpeed);
         _epBGSpeed += 0.05f;
 
+    }
+
+    public void AllCancel()
+    {
+        foreach (var item in _refStageList.Values)
+        {
+            item.SetBtnToNormal();
+        }
     }
 
     public void ClickUpNDownButton()
@@ -90,12 +194,10 @@ public class UIWellViewBox : MonoBehaviour
     }
     public void ClickPrevButton()
     {
-        SetTitleBox(_nowChapter - 1);
-        //맵과 배치 변화.
+        SetChapterInfo(_nowChapter - 1, GameTableManager._instance.Get(InfoTableName.ChapterInfoList));
     }
     public void ClickNextButton()
     {
-        SetTitleBox(_nowChapter + 1);
-        //맵과 배치 변화
+        SetChapterInfo(_nowChapter + 1, GameTableManager._instance.Get(InfoTableName.ChapterInfoList));
     }
 }

@@ -139,6 +139,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 5060264301626348399}
+          m_TargetAssemblyTypeName: UIStageInfoBtn, Assembly-CSharp
+          m_MethodName: ClickStageButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &7933592757595852708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +444,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237c28deeb933b5468d9440585dad6ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _btnIcon: {fileID: 3818455618486219839}
+  _textStageNum: {fileID: 3533720237326167129}
+  _rewardStars:
+  - {fileID: 3591076860767974090}
+  - {fileID: 1991427147785189784}
+  - {fileID: 7730892066175397194}
+  _lockIcon: {fileID: 8873703230431897214}
 --- !u!1 &6881439824009521949
 GameObject:
   m_ObjectHideFlags: 0
