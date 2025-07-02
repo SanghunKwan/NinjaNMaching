@@ -32,16 +32,19 @@ public class UIWellViewBox : MonoBehaviour
     //prefab
     GameObject _prefabStageBtn;
     GameObject _prefabStagePoint;
+    GameObject _prefabSelectWnd;
 
     Transform _pointRoot;
 
     //ÂüÁ¶
     Image _imageMap;
-    List<UIStageInfoBtn> _stageList;
     Dictionary<int, Dictionary<int, UIStageInfoBtn>> _stageAllList;
     List<GameObject> _rootList;
     Dictionary<int, UIStageInfoBtn> _refStageList;
 
+
+    //UI
+    UISelectStageWnd _uiStageInfoWnd;
 
     void SetChapterInfo(int epNum, TableBase table)
     {
@@ -143,8 +146,8 @@ public class UIWellViewBox : MonoBehaviour
         _epBGAnchorPosition = _epBG.anchoredPosition;
 
         _prefabStageBtn = Resources.Load<GameObject>("Prefabs/UIs/StageInfoMiniButton");
+        _prefabSelectWnd = Resources.Load<GameObject>("Prefabs/UIs/SelectStageWindow");
 
-        _stageList = new List<UIStageInfoBtn>();
         _stageAllList = new();
         _rootList = new();
 
@@ -174,6 +177,16 @@ public class UIWellViewBox : MonoBehaviour
             item.SetBtnToNormal();
         }
     }
+    public void OpenSelectStageWnd(int selectStage)
+    {
+        if (_uiStageInfoWnd == null)
+        {
+            GameObject go = Instantiate(_prefabSelectWnd);
+            _uiStageInfoWnd = go.GetComponent<UISelectStageWnd>();
+        }
+        _uiStageInfoWnd.OpenWnd(_nowChapter, selectStage);
+    }
+
 
     public void ClickUpNDownButton()
     {

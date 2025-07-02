@@ -11,7 +11,7 @@ public class WellOfGodManager : MonoBehaviour
     [SerializeField] Sprite[] _stageBtnIconList;
     [SerializeField] Sprite[] _stageRewardIconList;
 
-    
+
 
     //UIs
     UIWellViewBox _veiwBox;
@@ -27,13 +27,6 @@ public class WellOfGodManager : MonoBehaviour
         _uniqueInstance = this;
     }
 
-
-    //юс╫ц
-    private void Start()
-    {
-        InitManager(1);
-    }
-    // ==
 
     public void InitManager(int chapterNum)
     {

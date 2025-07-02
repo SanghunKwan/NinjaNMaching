@@ -3,6 +3,11 @@ using UnityEngine;
 namespace DefineEnum
 {
     #region [Manager Define]
+    public enum SceneName
+    {
+        WellOfGodScene,
+        IngameScene
+    }
     public enum GameState
     {
         INITLOAD,

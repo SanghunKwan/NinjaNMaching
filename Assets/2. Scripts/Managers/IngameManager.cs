@@ -81,20 +81,10 @@ public class IngameManager : MonoBehaviour
         _uniqueInstance = this;
     }
 
-    private void Start()
-    {
-        InitLoadGame(1);
-
-
-    }
     private void Update()
     {
         switch (_currentState)
         {
-            case GameState.INITLOAD:
-                if (Input.anyKey)
-                    ReadyGame();
-                break;
             case GameState.START:
                 _checkTime += Time.deltaTime;
                 if (_checkTime > 1)

@@ -13,6 +13,8 @@ public class UIStageInfoBtn : MonoBehaviour
 
     BtnState _nowState;
 
+    int _stageNumber;
+
     /// <summary>
     /// 스테이지 버튼의 초기 설정.
     /// </summary>
@@ -22,11 +24,12 @@ public class UIStageInfoBtn : MonoBehaviour
     public void InitBtn(int number, int clearStage, int rewardRank, UIWellViewBox owner)
     {
         _owerBox = owner;
-        _textStageNum.text = number.ToString();
+        _stageNumber = number;
+        _textStageNum.text = _stageNumber.ToString();
         _nowState = BtnState.Normal;
         _btnIcon.sprite = WellOfGodManager._instance.GetStageIcon(_nowState);
 
-        if (number - 1 > clearStage)
+        if (_stageNumber - 1 > clearStage)
         {
             _lockIcon.enabled = true;
 
@@ -62,5 +65,7 @@ public class UIStageInfoBtn : MonoBehaviour
         _nowState = BtnState.Select;
         _btnIcon.sprite = WellOfGodManager._instance.GetStageIcon(_nowState);
         _btnIcon.raycastTarget = false;
+
+        //stageWindow가 열림.
     }
 }
