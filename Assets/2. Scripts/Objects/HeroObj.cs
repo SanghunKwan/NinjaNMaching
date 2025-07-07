@@ -131,6 +131,7 @@ public class HeroObj : CharBase
         switch (type)
         {
             case 1:
+                Instantiate(Resources.Load<GameObject>("Prefabs/Effects/Attack"), _hitPos);
                 break;
             case 2:
                 break;

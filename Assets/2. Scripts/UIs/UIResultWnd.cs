@@ -145,11 +145,11 @@ public class UIResultWnd : MonoBehaviour
 
     public void ClickRegameButton()
     {
-
+        SceneControlManager._instance.StartGameStage();
     }
     public void ClickGoHomeButton()
     {
-
+        SceneControlManager._instance.StartWellOfGodMenu();
     }
     public void ClickNextStageButton()
     {

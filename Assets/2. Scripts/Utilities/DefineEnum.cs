@@ -20,6 +20,30 @@ namespace DefineEnum
         ENDGAME,
         RESULTGAME
     }
+    public enum BGMName
+    {
+        Desert1,
+        HomeTitle,
+
+        Max
+    }
+    public enum SFXName
+    {
+        Button1,
+        Button2,
+        Button3,
+        Counter,
+        Counter_Faster,
+        Fall,
+        GetUp,
+        Hit1,
+        Hit3,
+        MoveIn,
+        MoveOut,
+
+        Max
+    }
+
     public enum InfoTableName
     {
         MonsterInfoList,

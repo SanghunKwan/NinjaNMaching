@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace DefineStructure
 {
+    #region [public Utill Class]
     public class DefeatMonsterInfo
     {
         public int _id { get; set; }
@@ -18,6 +19,58 @@ namespace DefineStructure
             _rank = r;
             _icon = i;
             _count = 0;
+        }
+    }
+    #endregion [public Utill Class]
+
+    #region [public Utill Struct]
+    public struct AudioPlayerDESC
+    {
+        public AudioSource _player;
+
+
+        public float _vol
+        {
+            get => _player.volume;
+            set
+            {
+                if (value < 0)
+                {
+                    _player.volume = 0;
+                    _player.mute = true;
+                }
+                else if (value > 1)
+                {
+                    _player.volume = 1;
+                    _player.mute = false;
+                }
+                else
+                {
+                    _player.volume = value;
+                    _player.mute = false;
+                }
+            }
+        }
+        public bool _mute
+        {
+            get => _player.mute;
+            set => _player.mute = value;
+        }
+        public bool _loop
+        {
+            get => _player.loop;
+            set => _player.loop = value;
+        }
+
+
+        public AudioPlayerDESC(AudioSource audios, float vol, bool mute, bool loop = true)
+        {
+            _player = audios;
+            _player.playOnAwake = false;
+
+            _player.volume = vol;
+            _player.mute = mute;
+            _player.loop = loop;
         }
     }
     public struct StageClearInfo
@@ -57,4 +110,5 @@ namespace DefineStructure
                 _monIndexList.Enqueue(idx[i]);
         }
     }
+    #endregion [public Utill Struct]
 }

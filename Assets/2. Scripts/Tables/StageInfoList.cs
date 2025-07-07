@@ -10,6 +10,7 @@ public class StageInfoList : TableBase
         CardCount,
         LimitTime,
         MapName,
+        BGMIndex,
         SpawnIndex,
         Condition1,
         Condition2,

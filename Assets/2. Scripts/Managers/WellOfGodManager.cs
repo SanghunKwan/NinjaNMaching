@@ -36,4 +36,9 @@ public class WellOfGodManager : MonoBehaviour
         _veiwBox.InitBox(chapterNum);
     }
 
+    public void CallViewBox(int stageNum)
+    {
+        _veiwBox.OpenSelectStageWnd(stageNum);
+    }
+
 }

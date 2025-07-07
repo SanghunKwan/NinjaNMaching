@@ -58,13 +58,34 @@ public class SceneControlManager : TSingleton<SceneControlManager>
         }
         if (_nowScene == SceneName.IngameScene)
         {
+            BGMName bgm = BGMName.HomeTitle;
+            int count = (int)BGMName.Max;
+            string bgmName = GameTableManager._instance.Get(InfoTableName.StageInfoList).ToStr(1, StageInfoList.Index.BGMIndex.ToString());
+            for (int i = 0; i < count; i++)
+            {
+                if (bgmName.CompareTo(((BGMName)i).ToString()) == 0)
+                {
+                    bgm = (BGMName)i;
+                    break;
+                }
+            }
+            SoundManager._instance.PlayBGM(bgm);
+            
+
+
+
             IngameManager._instance.InitLoadGame(1);
         }
         //로딩 100% 지점.
         _loadingWnd.SetLoadingRate(1);
         yield return new WaitForSeconds(1.5f);
         //로딩창 닫기.
+
         _loadingWnd.CloseWnd();
+        if (_nowScene == SceneName.IngameScene)
+        {
+            IngameManager._instance.ReadyGame();
+        }
         // Ingame Ready를 해준다.
 
 

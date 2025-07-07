@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using DefineEnum;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UISelectStageWnd : MonoBehaviour
@@ -17,6 +18,8 @@ public class UISelectStageWnd : MonoBehaviour
     [SerializeField] Transform _monBarParent;
 
     [SerializeField] Sprite[] _monsterGradeIcons;
+
+    [SerializeField] EventTrigger nextButton;
 
     GameObject _prefabBar;
     List<GameObject> _monsterBarList;
@@ -96,6 +99,18 @@ public class UISelectStageWnd : MonoBehaviour
             Instantiate(bar, _monBarParent).InitBar(GetIconFromMonsterGrade(tempGrade), tempIcon, tempString);
         }
 
+        //nextButton.triggers = null;
+        //EventTrigger.Entry entry = new EventTrigger.Entry();
+        //entry.eventID = EventTriggerType.PointerClick;
+        //entry.callback.AddListener(CallNextScene);
+        //nextButton.triggers.Add(entry);
+
+        nextButton.triggers[0].callback.RemoveAllListeners();
+        nextButton.triggers[0].callback.AddListener(CallNextScene);
+    }
+    void CallNextScene(BaseEventData data)
+    {
+        SceneControlManager._instance.StartGameStage();
     }
     string LifeCondition(in string life) => "생명력 " + life + "% 이상";
 

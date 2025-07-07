@@ -67,5 +67,7 @@ public class UIStageInfoBtn : MonoBehaviour
         _btnIcon.raycastTarget = false;
 
         //stageWindow°¡ ¿­¸².
+        WellOfGodManager._instance.CallViewBox(_stageNumber);
+
     }
 }

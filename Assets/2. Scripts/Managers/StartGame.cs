@@ -6,6 +6,7 @@ public class StartGame : MonoBehaviour
     {
         GameTableManager._instance.AllLoadTable();
         ResourcePoolManager._instance.AllLoad();
+        SoundManager._instance.LoadAllSound();
     }
     private void Start()
     {
