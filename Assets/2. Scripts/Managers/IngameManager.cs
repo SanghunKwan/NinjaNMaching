@@ -201,7 +201,8 @@ public class IngameManager : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
-        StartGame();
+        if (_currentState == GameState.CARDDEPLOY)
+            StartGame();
     }
     int[] GetShuffleCard(int typeCount)
     {
@@ -405,6 +406,7 @@ public class IngameManager : MonoBehaviour
                 }
             }
         }
+
         if (beNot)
         {
             _uiBMBox.OpenBox("CardSet...");
@@ -458,7 +460,7 @@ public class IngameManager : MonoBehaviour
     public void DeadDelayTime()
     {
         _currentState = GameState.DEADDELAY;
-
+        Debug.Log(_currentState);
         _checkTime = 0;
         if (_stageInfo._monIndexList.Count > 0)
         {
@@ -501,6 +503,11 @@ public class IngameManager : MonoBehaviour
             else
                 rank = 1;
         }
+
+
+        UserInfoManager._instance._currentCharacterXP += _stageInfo._rewardXP;
+        //조건문 추가
+        UserInfoManager._instance._clearedStage++;
 
         wnd.OpenWnd(_gameSuccess, rank, _totalMatchCount, _totalMissmatchCount, _playTime, _stageInfo._rewardXP, _killMonsterList);
     }

@@ -15,10 +15,13 @@ public class HeroObj : CharBase
     SpriteRenderer _model;
     UIMiniStatInfoBox _uiStatBox;
     MonsterObj _target;
+    ParticleSystem _hitEffect;
 
     AniActionState _state;
     float _speed;
 
+    //3콤보 시 스킬2 //200
+    //4콤보 시 스킬1 //300
 
 
     public override int _finalDamage => _attack;
@@ -85,6 +88,7 @@ public class HeroObj : CharBase
         _aniController = GetComponent<Animator>();
         _model = transform.GetChild(0).GetComponent<SpriteRenderer>();
         _uiStatBox = box;
+        _hitEffect = _hitPos.GetChild(0).GetComponent<ParticleSystem>();
 
         //Level에 따른 히어로의 스탯 설정.
         TableBase table = GameTableManager._instance.Get(InfoTableName.LevelInfoList);
@@ -128,15 +132,20 @@ public class HeroObj : CharBase
     {
         //Debug.Log("확~때려부려!!");
         int finishDamage = _finalDamage;
+        GameObject prefabEffect;
         switch (type)
         {
             case 1:
-                Instantiate(Resources.Load<GameObject>("Prefabs/Effects/Attack"), _hitPos);
+                prefabEffect = Resources.Load<GameObject>("Prefabs/Effects/Attack");
                 break;
             case 2:
+                prefabEffect = Resources.Load<GameObject>("Prefabs/Effects/MonsterHit");
+                break;
+            default:
+                prefabEffect = Resources.Load<GameObject>("Prefabs/Effects/Attack");
                 break;
         }
-        if (_target.OnHit(_finalDamage))
+        if (_target.OnHit(_finalDamage, prefabEffect))
         {
             _target = null;
             IngameManager._instance.DeadDelayTime();
@@ -184,6 +193,7 @@ public class HeroObj : CharBase
     {
         bool result = false;
         int dam = Mathf.Max(finalDamage - _finalDefence, 1);
+        _hitEffect.Play();
 
         if ((_nowHP -= dam) <= 0)
         {

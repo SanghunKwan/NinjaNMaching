@@ -10,7 +10,7 @@ public abstract class CharBase : MonoBehaviour
     protected bool _isDead;
     protected int _nowHP;
 
-    protected Transform _hitPos;
+    [SerializeField] protected Transform _hitPos;
 
     public bool _isDeaded => _isDead;
     public int _currentHP => _nowHP;
@@ -23,8 +23,6 @@ public abstract class CharBase : MonoBehaviour
         _attack = att;
         _defence = def;
         _nowHP = _hp = hp;
-
-        _hitPos = transform.GetChild(2);
     }
 
     public abstract int _finalDamage { get; }

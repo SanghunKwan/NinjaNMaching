@@ -54,7 +54,7 @@ public class SceneControlManager : TSingleton<SceneControlManager>
 
         if (_nowScene == SceneName.WellOfGodScene)
         {
-            WellOfGodManager._instance.InitManager(1);
+            WellOfGodManager._instance.InitManager(UserInfoManager._instance._selectStage);
         }
         if (_nowScene == SceneName.IngameScene)
         {
@@ -70,11 +70,7 @@ public class SceneControlManager : TSingleton<SceneControlManager>
                 }
             }
             SoundManager._instance.PlayBGM(bgm);
-            
-
-
-
-            IngameManager._instance.InitLoadGame(1);
+            IngameManager._instance.InitLoadGame(UserInfoManager._instance._selectStage);
         }
         //로딩 100% 지점.
         _loadingWnd.SetLoadingRate(1);

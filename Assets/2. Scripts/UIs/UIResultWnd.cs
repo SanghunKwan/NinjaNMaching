@@ -49,6 +49,7 @@ public class UIResultWnd : MonoBehaviour
             _nextButton.SetActive(false);
         }
 
+
         //_textMatchCount.text = mCount.ToString();
         //_textMissMatchCount.text = mmCount.ToString();
         //_textAcquisitionXP.text = xp.ToString();
@@ -153,6 +154,7 @@ public class UIResultWnd : MonoBehaviour
     }
     public void ClickNextStageButton()
     {
-
+        UserInfoManager._instance._selectStage++;
+        SceneControlManager._instance.StartGameStage();
     }
 }

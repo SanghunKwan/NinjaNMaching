@@ -15,6 +15,10 @@ public class UISelectStageWnd : MonoBehaviour
     [SerializeField] Text[] _starConditions;
     const int ConditionCount = 3;
 
+    int _thisChapter;
+    int _thisStage;
+
+
     [SerializeField] Transform _monBarParent;
 
     [SerializeField] Sprite[] _monsterGradeIcons;
@@ -23,6 +27,8 @@ public class UISelectStageWnd : MonoBehaviour
 
     GameObject _prefabBar;
     List<GameObject> _monsterBarList;
+
+
 
     public Sprite GetIconFromMonsterGrade(MonsterGrade mg) => _monsterGradeIcons[(int)mg];
     public Sprite GetIconFromMonsterHead(in string iconName) => ResourcePoolManager._instance.Get<Sprite>(PoolDataType.MONSTERICON, iconName);
@@ -37,14 +43,13 @@ public class UISelectStageWnd : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
-    private void Start()
-    {
-        OpenWnd(1, 1);
-    }
     public void OpenWnd(int chapter, int stageIndex)
     {
         gameObject.SetActive(true);
+
+        _thisChapter = chapter;
+        _thisStage = stageIndex;
+
 
         string tempString;
         //스테이지 이름
@@ -74,7 +79,6 @@ public class UISelectStageWnd : MonoBehaviour
 
         //몬스터 정보
         int spawnIndex = tb.ToInt(stageIndex, StageInfoList.Index.SpawnIndex.ToString());
-        Debug.Log(spawnIndex);
 
         tb = GameTableManager._instance.Get(InfoTableName.MonsterSpawnList);
         int monsterCount = tb.ToInt(spawnIndex, MonsterSpawnList.Index.MonsterCount.ToString());
@@ -104,13 +108,6 @@ public class UISelectStageWnd : MonoBehaviour
         //entry.eventID = EventTriggerType.PointerClick;
         //entry.callback.AddListener(CallNextScene);
         //nextButton.triggers.Add(entry);
-
-        nextButton.triggers[0].callback.RemoveAllListeners();
-        nextButton.triggers[0].callback.AddListener(CallNextScene);
-    }
-    void CallNextScene(BaseEventData data)
-    {
-        SceneControlManager._instance.StartGameStage();
     }
     string LifeCondition(in string life) => "생명력 " + life + "% 이상";
 
@@ -121,6 +118,9 @@ public class UISelectStageWnd : MonoBehaviour
     }
     public void OnClickStartButton()
     {
+        UserInfoManager._instance._nowChapter = _thisChapter;
+        UserInfoManager._instance._selectStage = _thisStage;
 
+        SceneControlManager._instance.StartGameStage();
     }
 }

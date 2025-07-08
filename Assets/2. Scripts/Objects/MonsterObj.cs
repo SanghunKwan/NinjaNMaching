@@ -108,10 +108,12 @@ public class MonsterObj : CharBase
 
         IngameManager._instance.CardDeploy();
     }
-    public bool OnHit(int finalDamage)
+    public bool OnHit(int finalDamage, GameObject effectPrefab)
     {
         bool result = false;
         int dam = Mathf.Max(finalDamage - _finalDefence, 1);
+        if (effectPrefab != null)
+            Instantiate(effectPrefab, _hitPos.position, Quaternion.identity, _hitPos);
 
         if ((_nowHP -= dam) <= 0)
         {

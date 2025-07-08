@@ -24,6 +24,17 @@ namespace DefineStructure
     #endregion [public Utill Class]
 
     #region [public Utill Struct]
+    public struct GameInfoDESC
+    {
+        public string _name;
+        public int _level;
+        public int _xp;
+
+        public int _selectedChapter;
+        public int _selectedStage;
+        public int _openChapter;
+        public int _clearedStage;
+    }
     public struct AudioPlayerDESC
     {
         public AudioSource _player;
