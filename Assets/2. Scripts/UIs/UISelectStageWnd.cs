@@ -39,9 +39,26 @@ public class UISelectStageWnd : MonoBehaviour
     // openWnd
 
     //startBtn
+
+    public void InitWnd()
+    {
+        _monsterBarList = new List<GameObject>();
+
+        _prefabBar = Resources.Load<GameObject>("Prefabs/UIs/MonsterInfoBar");
+    }
+
+
     public void CloseWnd()
     {
         gameObject.SetActive(false);
+
+        WellOfGodManager._instance.SetButtonCancel(_thisStage);
+
+        int length = _monsterBarList.Count;
+        for (int i = 0; i < length; i++)
+        {
+            _monsterBarList[i].SetActive(false);
+        }
     }
     public void OpenWnd(int chapter, int stageIndex)
     {
@@ -68,10 +85,10 @@ public class UISelectStageWnd : MonoBehaviour
         _textReward.text = tempString;
 
 
-        //별 1 클리어 조건(대부분 생존 시 별 1)
-        _starConditions[0].text = "생존";
-        //별 2 클리어 조건
         tempString = tb.ToStr(stageIndex, StageInfoList.Index.Condition1.ToString());
+        //별 1 클리어 조건(대부분 생존 시 별 1)
+        _starConditions[0].text = "생명력 " + tempString + "% 이하";
+        //별 2 클리어 조건
         _starConditions[1].text = LifeCondition(tempString);
         //별 3 클리어 조건
         tempString = tb.ToStr(stageIndex, StageInfoList.Index.Condition2.ToString());
@@ -89,7 +106,6 @@ public class UISelectStageWnd : MonoBehaviour
         }
 
         tb = GameTableManager._instance.Get(InfoTableName.MonsterInfoList);
-        UIMonsterInfoBar bar = Resources.Load<UIMonsterInfoBar>("Prefabs/UIs/MonsterInfoBar");
 
         Sprite tempIcon;
         MonsterGrade tempGrade;
@@ -100,7 +116,17 @@ public class UISelectStageWnd : MonoBehaviour
             tempIcon = GetIconFromMonsterHead(tempString);
 
             tempString = tb.ToStr(monIndexArray[i], MonsterInfoList.Index.MonsterName.ToString());
-            Instantiate(bar, _monBarParent).InitBar(GetIconFromMonsterGrade(tempGrade), tempIcon, tempString);
+
+            if (_monsterBarList.Count > i)
+            {
+                _monsterBarList[i].SetActive(true);
+            }
+            else
+            {
+                GameObject barObject = Instantiate(_prefabBar, _monBarParent);
+                _monsterBarList.Add(barObject);
+                barObject.GetComponent<UIMonsterInfoBar>().InitBar(GetIconFromMonsterGrade(tempGrade), tempIcon, tempString);
+            }
         }
 
         //nextButton.triggers = null;

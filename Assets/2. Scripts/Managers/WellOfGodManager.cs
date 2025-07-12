@@ -1,7 +1,6 @@
 using UnityEngine;
 using DefineEnum;
 using UnityEngine.UI;
-using Unity.VisualScripting;
 
 public class WellOfGodManager : MonoBehaviour
 {
@@ -34,5 +33,10 @@ public class WellOfGodManager : MonoBehaviour
         _veiwBox = go.GetComponent<UIWellViewBox>();
 
         _veiwBox.InitBox(chapterNum);
+    }
+
+    public void SetButtonCancel(int stageNum)
+    {
+        _veiwBox.SetCancel(stageNum);
     }
 }

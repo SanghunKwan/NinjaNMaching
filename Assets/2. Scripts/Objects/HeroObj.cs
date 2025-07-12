@@ -4,6 +4,10 @@ using System.Collections;
 
 public class HeroObj : CharBase
 {
+    //임시 스킬 스탯
+    const int _firstSkillDamage = 200;
+    const int _secondSkillDamage = 300;
+
     // stat 관련 정보
     int _level;
     int _nowXP;
@@ -128,6 +132,10 @@ public class HeroObj : CharBase
 
         ExchangeAniToAction(state);
     }
+    public void OrderOfSkill(AniActionState state)
+    {
+        ExchangeAniToAction(state);
+    }
     public void HittingMon(int type)            //0 : 일반공격, 1 : 스킬1, 2 : 스킬2
     {
         //Debug.Log("확~때려부려!!");
@@ -137,9 +145,11 @@ public class HeroObj : CharBase
         {
             case 1:
                 prefabEffect = Resources.Load<GameObject>("Prefabs/Effects/Attack");
+                finishDamage = _firstSkillDamage;
                 break;
             case 2:
                 prefabEffect = Resources.Load<GameObject>("Prefabs/Effects/MonsterHit");
+                finishDamage = _secondSkillDamage;
                 break;
             default:
                 prefabEffect = Resources.Load<GameObject>("Prefabs/Effects/Attack");

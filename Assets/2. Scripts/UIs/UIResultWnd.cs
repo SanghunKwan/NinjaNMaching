@@ -1,3 +1,4 @@
+using DefineEnum;
 using DefineStructure;
 using System;
 using System.Collections;
@@ -7,6 +8,8 @@ using UnityEngine.UI;
 
 public class UIResultWnd : MonoBehaviour
 {
+    const float _delayTime = 2; //텍스트 변경 딜레이 시간
+
     [Header("결과창 자원")]
     [SerializeField] Sprite[] _resultIcons;
     [Header("결과창 설정")]
@@ -23,6 +26,8 @@ public class UIResultWnd : MonoBehaviour
     [SerializeField] Text _textMilSeconds;
     [SerializeField] Text _textAcquisitionXP;
 
+    [SerializeField] Slider _sliderAcquisitionXP;
+
     [SerializeField] ScrollRect _killCountViewer;
     [SerializeField] GameObject _nextButton;
 
@@ -33,7 +38,7 @@ public class UIResultWnd : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-    public void OpenWnd(bool isSuccess, int rank, int mCount, int mmCount, float gameTime, int xp, IReadOnlyDictionary<int, DefeatMonsterInfo> killList)
+    public void OpenWnd(bool isSuccess, int rank, int mCount, int mmCount, float gameTime, int xp, int lastLevel, int lastxp, IReadOnlyDictionary<int, DefeatMonsterInfo> killList)
     {
         gameObject.SetActive(true);
 
@@ -70,15 +75,26 @@ public class UIResultWnd : MonoBehaviour
             bar.OpenBar(item._rank, item._icon, item._name, item._count);
         }
 
-        StartCoroutine(SetText(mCount, mmCount, gameTime, xp));
+        StartCoroutine(SetText(mCount, mmCount, gameTime, xp, lastLevel, lastxp));
     }
-    IEnumerator SetText(int mCount, int mmCount, float gameTime, int xp)
+    IEnumerator SetText(int mCount, int mmCount, float gameTime, int xp, int lastLevel, int lastxp)
     {
         //수정할 모든 text 
         //특정 초가 되기 전까지 text 규칙에 따라 계속 바꿈.
         float accumTime = 0f;
+        float deltaSliderValueAdd;
+        float prevXp;
+        float resultXp;
+        TableBase levelTable = GameTableManager._instance.Get(InfoTableName.LevelInfoList);
+        int minXp = (lastLevel == 1) ? 0 : levelTable.ToInt(lastLevel - 1, LevelInfoList.Index.XP.ToString());
+        int maxXp = levelTable.ToInt(lastLevel, LevelInfoList.Index.XP.ToString());
 
-        yield return RepeatUntil(() => accumTime < 2,
+        int currentLevel = UserInfoManager._instance._currentCharacterLevel;
+        int levelUpCount = currentLevel - lastLevel;
+
+        prevXp = _sliderAcquisitionXP.value = GetSliderValue(lastxp, minXp, maxXp);
+
+        yield return RepeatUntil(() => accumTime < _delayTime,
            () =>
            {
                ChangeTextRandom(_textMatchCount, 5);
@@ -96,7 +112,7 @@ public class UIResultWnd : MonoBehaviour
                accumTime = 0f;
            });
 
-        yield return RepeatUntil(() => accumTime < 2,
+        yield return RepeatUntil(() => accumTime < _delayTime,
             () =>
             {
                 ChangeTextRandom(_textAcquisitionXP, 2);
@@ -115,15 +131,30 @@ public class UIResultWnd : MonoBehaviour
                 accumTime = 0f;
             });
 
-        yield return RepeatUntil(() => accumTime < 2,
+        //이전 레벨, 이전 경험치 필요.
+
+
+        if (levelUpCount != 0)
+        {
+            minXp = levelTable.ToInt(currentLevel - 1, LevelInfoList.Index.XP.ToString());
+            maxXp = levelTable.ToInt(currentLevel, LevelInfoList.Index.XP.ToString());
+        }
+
+        resultXp = GetSliderValue(UserInfoManager._instance._currentCharacterXP, minXp, maxXp);
+        deltaSliderValueAdd = (resultXp + levelUpCount - _sliderAcquisitionXP.value) / _delayTime;
+        Debug.Log(resultXp);
+        yield return RepeatUntil(() => accumTime < _delayTime,
             () =>
             {
                 ChangeTextRandom(_textAcquisitionXP, 2);
+                //slider 값 변경.
                 accumTime += Time.deltaTime;
+                _sliderAcquisitionXP.value = (prevXp + deltaSliderValueAdd * accumTime) % 1f;
             },
             () =>
             {
                 _textAcquisitionXP.text = xp.ToString();
+                _sliderAcquisitionXP.value = resultXp;
                 accumTime = 0f;
             });
         //특정 초 후에 이벤트 작동.
@@ -143,6 +174,7 @@ public class UIResultWnd : MonoBehaviour
         string str = string.Format("{0:D" + digits + "}", UnityEngine.Random.Range(0, ((int)digits) * 10));
         text.text = str;
     }
+    float GetSliderValue(int currentXP, int minXP, int maxXP) => (float)(currentXP - minXP) / (maxXP - minXP);
 
     public void ClickRegameButton()
     {
@@ -157,4 +189,6 @@ public class UIResultWnd : MonoBehaviour
         UserInfoManager._instance._selectStage++;
         SceneControlManager._instance.StartGameStage();
     }
+
+
 }

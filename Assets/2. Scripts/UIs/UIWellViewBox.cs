@@ -19,10 +19,6 @@ public class UIWellViewBox : MonoBehaviour
 
     int _epCount;
     int _nowChapter;
-    //임시
-    int _openChapter = 1;
-    int _clearStage = 2;
-    //==
 
 
     Vector2 _epBGAnchorPosition;
@@ -75,6 +71,7 @@ public class UIWellViewBox : MonoBehaviour
 
             name = table.ToStr(epNum, ChapterInfoList.Index.RootName.ToString());
             _prefabStagePoint = Resources.Load<GameObject>("Prefabs/Maps/" + name);
+            Debug.Log(name);
 
             GameObject root = new GameObject("root" + epNum);
             Transform rootTransform = root.transform;
@@ -86,26 +83,26 @@ public class UIWellViewBox : MonoBehaviour
 
             GameObject tempItem;
             UIStageInfoBtn tempStageBtn;
+            IReadOnlyDictionary<int, int> starDic = UserInfoManager._instance.GetStarDictionary(epNum);
             for (int i = 0; i < point.childCount; i++)
             {
                 tempItem = Instantiate(_prefabStageBtn, point.GetChild(i).position, Quaternion.identity, rootTransform);
 
                 tempStageBtn = tempItem.GetComponent<UIStageInfoBtn>();
-                //수정 사항
+
                 int star = 0;
-                int clear = _clearStage;
-                if (epNum > _openChapter)
+                int clear = UserInfoManager._instance._clearedStage;
+                if (epNum > UserInfoManager._instance._openedChapter)
                 {
                     clear = -1;
                 }
 
-                if (i < clear) // i + 1 < _clearStage + 1
+                if (i < clear && starDic != null) // i + 1 < _clearStage + 1
                 {
-                    star = Random.Range(1, 4); //1 ~ 3
+                    star = starDic.ContainsKey(i + 1) ? starDic[i + 1] : 0;
                 }
-                tempStageBtn.InitBtn(i + 1, clear, star, this);
-                //==
 
+                tempStageBtn.InitBtn(i + 1, clear, star, this);
                 chapterList.Add(i + 1, tempStageBtn);
             }
             _stageAllList.Add(epNum, chapterList);
@@ -169,7 +166,10 @@ public class UIWellViewBox : MonoBehaviour
         _epBGSpeed += 0.05f;
 
     }
-
+    public void SetCancel(int stageNum)
+    {
+        _refStageList[stageNum].SetBtnToNormal();
+    }
     public void AllCancel()
     {
         foreach (var item in _refStageList.Values)
@@ -183,6 +183,7 @@ public class UIWellViewBox : MonoBehaviour
         {
             GameObject go = Instantiate(_prefabSelectWnd);
             _uiStageInfoWnd = go.GetComponent<UISelectStageWnd>();
+            _uiStageInfoWnd.InitWnd();
         }
         _uiStageInfoWnd.OpenWnd(_nowChapter, selectStage);
     }

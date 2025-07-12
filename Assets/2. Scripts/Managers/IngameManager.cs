@@ -9,7 +9,13 @@ public class IngameManager : MonoBehaviour
     static IngameManager _uniqueInstance;
 
     const int _limitWidth = 6;
+
+    const int _firstSkill = 4;
+    const int _secondSkill = 3;
+
+
     const float _cardGenDelayTime = 0.1f;
+
     Vector2 _offset = new Vector2(1.6f, -2.1f);
 
     [Header("리소스 관리")]
@@ -45,6 +51,8 @@ public class IngameManager : MonoBehaviour
 
     int _totalMissmatchCount;
     int _totalMatchCount;
+
+    int _continuousMatchCount;
 
     GameState _currentState;
     StageInfo _stageInfo;
@@ -123,8 +131,20 @@ public class IngameManager : MonoBehaviour
                     {
                         if (MatchedCard(_firstIndex, _secondIndex))
                         {
+                            if (_continuousMatchCount == _firstSkill)
+                            {
+                                _player.OrderOfSkill(AniActionState.SPECIAL1);
+                            }
+                            else if (_continuousMatchCount == _secondSkill)
+                            {
+                                _player.OrderOfSkill(AniActionState.SPECIAL2);
+                            }
+                            else
+                            {
+                                _player.OrderOfAttack();
+                            }
+
                             //플레이어에게 몬스터를 공격하도록 지시.
-                            _player.OrderOfAttack();
 
                             //삭제
                             //Debug.LogFormat("{0}번 카드와 {1}번 카드가 삭제되었습니다.", _firstIndex, _secondIndex);
@@ -132,6 +152,7 @@ public class IngameManager : MonoBehaviour
                             Destroy(_genCardList[_secondIndex].gameObject);
 
                             _totalMatchCount++;
+                            _continuousMatchCount++;
                             _choiceCount = 0;
                             _firstIndex = _secondIndex = -1;
                             _isDestoryCard = true;
@@ -141,6 +162,7 @@ public class IngameManager : MonoBehaviour
                         {
                             _totalMissmatchCount++;
                             _missMatchCount += 1;
+                            _continuousMatchCount = 0;
                             //몬스터에게 실패 횟수를 알려줌.
                             _missMatchCount = _other.CalcAttackStartRate(_missMatchCount);
 
@@ -382,7 +404,7 @@ public class IngameManager : MonoBehaviour
         _missMatchCount = _totalMissmatchCount = 0;
 
         //임시
-        _player.InitSet(_rootAction.GetChild(0), "홍길동", 1, 0, _uiMiniInfoBox);
+        _player.InitSet(_rootAction.GetChild(0), "홍길동", UserInfoManager._instance._currentCharacterLevel, UserInfoManager._instance._currentCharacterXP, _uiMiniInfoBox);
         //==
 
         _uiTimerBox.OpenBox();
@@ -492,6 +514,8 @@ public class IngameManager : MonoBehaviour
         UIResultWnd wnd = go.GetComponent<UIResultWnd>();
 
         int rank = 0;
+        int lastLevel = UserInfoManager._instance._currentCharacterLevel;
+        int lastXp = UserInfoManager._instance._currentCharacterXP;
         if (_gameSuccess)
         {
             //Rank 체크
@@ -502,14 +526,12 @@ public class IngameManager : MonoBehaviour
                 rank = 2;
             else
                 rank = 1;
+
+
+            UserInfoManager._instance.StageClear(_stageInfo._rewardXP, rank);
+            //rank
         }
-
-
-        UserInfoManager._instance._currentCharacterXP += _stageInfo._rewardXP;
-        //조건문 추가
-        UserInfoManager._instance._clearedStage++;
-
-        wnd.OpenWnd(_gameSuccess, rank, _totalMatchCount, _totalMissmatchCount, _playTime, _stageInfo._rewardXP, _killMonsterList);
+        wnd.OpenWnd(_gameSuccess, rank, _totalMatchCount, _totalMissmatchCount, _playTime, _stageInfo._rewardXP, lastLevel, lastXp, _killMonsterList);
     }
 
     public Sprite GetIconFromMonsterGrade(MonsterGrade mg)

@@ -54,7 +54,8 @@ public class SceneControlManager : TSingleton<SceneControlManager>
 
         if (_nowScene == SceneName.WellOfGodScene)
         {
-            WellOfGodManager._instance.InitManager(UserInfoManager._instance._selectStage);
+            WellOfGodManager._instance.InitManager(UserInfoManager._instance._nowChapter);
+            SoundManager._instance.PlayBGM(BGMName.HomeTitle);
         }
         if (_nowScene == SceneName.IngameScene)
         {
